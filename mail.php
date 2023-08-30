@@ -3,7 +3,9 @@
  // Import PHPMailer classes into the global namespace
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
-    use PHPMailer\PHPMailer\Exception;
+    
+// Load Composer's autoloader
+    require 'vendor/autoload.php';
     
 // Validation to ensure that the necessary POST variables exist
 if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message'])) {
@@ -15,10 +17,6 @@ if (isset($_POST['name']) && isset($_POST['email']) && isset($_POST['message']))
     $subject = isset($_POST['subject']) ? filter_var($_POST['subject'], FILTER_SANITIZE_STRING) : 'No Subject';
     $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
 
-   
-
-    // Load Composer's autoloader
-    require 'vendor/autoload.php';
 
     ini_set('display_errors', 1);
     ini_set('display_startup_errors', 1);
