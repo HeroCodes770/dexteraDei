@@ -19,6 +19,38 @@
 
   <!-- Styles -->
   <link href="css/style.css" rel="stylesheet" media="screen">
+
+  <!--Styles for the what we do section-->
+  <style>
+    .container {
+        width: 100%;
+        margin-top: 5rem;
+        padding: 0 1rem;
+    }
+    .row-services {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+    }
+    .col-service {
+        padding: 2rem;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        text-align: center;
+    }
+    @media (max-width: 1024px) {
+        .row-services {
+            grid-template-columns: repeat(2, 1fr); 
+        }
+    }
+    @media (max-width: 768px) {
+        .row-services {
+            grid-template-columns: 1fr; 
+        }
+    }
+</style>
+  
 </head>
 <body>
 
@@ -614,63 +646,42 @@
                 <div class="info-title">What We Do</div>
               </div>
             </div>
-            <div class="col-md-9">
-              <div class="row-services row">
-                <div class="col-service col-sm-6 col-lg-4 wow fadeInUp">
-                  <span class="text-dark icon icon-apartment"></span>
-                  <h4>Architecture</h4>
-                  <p>We are architectural experts, passionately crafting innovative and timeless designs. Our <br>skilled team transforms visions
-                  into stunning reality, delivering exceptional architectural solutions that inspire and elevate spaces.</p>
-                </div>
-                <div class="col-service col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
-                  <span class="text-dark icon icon-couch"></span>
-                  <h4>Construction</h4>
-                  <p>We are architectural visionaries, transforming dreams into breathtaking reality. Our expert team blends creativity,
-                  precision, and sustainability to craft architectural masterpieces that inspire and transcend expectations.</p>
-                </div>
-                <div class="clearfix visible-sm visible-md"></div>
-                <div class="col-service col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay="0.8s">
-                  <span class="text-dark icon icon-pencil-ruler"></span>
-                  <h4>Interior Design</h4>
-                  <p>We are interior design maestros, crafting captivating and transformative spaces. Our expert team combines creativity,
-                  precision, and a deep understanding of aesthetics to curate interiors that inspire and elevate.</p>
-                </div>
-              </div>
+          <div class="container">
+            <div class="row-services">
+              <div class="col-service wow fadeInUp">
+                <span class="text-dark icon icon-apartment"></span>
+                <h4>Land Acquisition</h4>
+                <p>Our dedicated team possesses unrivaled expertise and a deep understanding of the real estate market. With precision and confidence, we navigate the complexities of land acquisition, ensuring a seamless process for our clients.</p>
             </div>
-            
-          </div>
-        </div>
-        <div class="container" style="margin-top: 5rem;">
-          <div class="row">
-            <div class="col-md-3">
-            </div>
-            <div class="col-md-9">
-              <div class="row-services row">
-                <div class="col-service col-sm-6 col-lg-4 wow fadeInUp">
-                  <span class="text-dark icon icon-apartment"></span>
-                  <h4>Land Acquisition</h4>
-                  <p>Our dedicated team possesses unrivaled expertise and a deep understanding of the real estate market. With precision and
-                  confidence, we navigate the complexities of land acquisition, ensuring a seamless process for our clients.</p>
+                <div class="col-service wow fadeInUp">
+                    <span class="text-dark icon icon-apartment"></span>
+                    <h4>Architecture</h4>
+                    <p>We are architectural experts, passionately crafting innovative and timeless designs. Our skilled team transforms visions into stunning reality, delivering exceptional architectural solutions that inspire and elevate spaces.</p>
                 </div>
-                <div class="col-service col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay="0.4s">
-                  <span class="text-dark icon icon-couch"></span>
-                  <h4>Accommodation</h4>
-                  <p>We are your home acquisition experts, taking the stress out of your hands. Our knowledgeable team has a deep
-                  understanding of the real estate market and is dedicated to finding your perfect home.</p>
+                <div class="col-service wow fadeInUp" data-wow-delay="0.4s">
+                    <span class="text-dark icon icon-couch"></span>
+                    <h4>Construction</h4>
+                    <p>We are architectural visionaries, transforming dreams into breathtaking reality. Our expert team blends creativity, precision, and sustainability to craft architectural masterpieces that inspire and transcend expectations.</p>
                 </div>
-                <div class="clearfix visible-sm visible-md"></div>
-                <div class="col-service col-sm-6 col-lg-4 wow fadeInUp" data-wow-delay="0.8s">
+                <div class="col-service wow fadeInUp" data-wow-delay="0.8s">
+                    <span class="text-dark icon icon-pencil-ruler"></span>
+                    <h4>Interior Design</h4>
+                    <p>We are interior design maestros, crafting captivating and transformative spaces. Our expert team combines creativity, precision, and a deep understanding of aesthetics to curate interiors that inspire and elevate.</p>
+                </div>
+                <div class="col-service wow fadeInUp" data-wow-delay="0.8s">
                   <span class="text-dark icon icon-pencil-ruler"></span>
                   <h4>Consultation</h4>
-                  <p>We offer comprehensive architectural and construction consultation services. Our expertise spans from the initial design
-                  phase to the final construction stages. We provide expert guidance, and technical expertise throughout the
-                  project lifecycle.</p>
-                </div>
+                  <p>We offer comprehensive architectural and construction consultation services. Our expertise spans from the initial design phase to the final construction stages. We provide expert guidance, and technical expertise throughout the project lifecycle.</p>
               </div>
+                <div class="col-service wow fadeInUp" data-wow-delay="0.4s">
+                    <span class="text-dark icon icon-couch"></span>
+                    <h4>Accommodation</h4>
+                    <p>We are your home acquisition experts, taking the stress out of your hands. Our knowledgeable team has a deep understanding of the real estate market and is dedicated to finding your perfect home.</p>
+                </div>
+
             </div>
-        
-          </div>
         </div>
+      
       </section>
      
 
