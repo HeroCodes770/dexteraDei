@@ -49,7 +49,271 @@
             grid-template-columns: 1fr; 
         }
     }
-</style>
+
+    /* EXPLOSIVE PROJECTS SECTION REDESIGN */
+    .section-projects {
+        background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f8f9fa 100%);
+        position: relative;
+        overflow: hidden;
+        padding: 80px 0;
+    }
+
+    .section-projects::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: 
+            radial-gradient(circle at 20% 20%, rgba(206, 224, 2, 0.03) 0%, transparent 50%),
+            radial-gradient(circle at 80% 80%, rgba(255, 215, 0, 0.03) 0%, transparent 50%);
+        animation: pulseBackground 8s ease-in-out infinite;
+    }
+
+    @keyframes pulseBackground {
+        0%, 100% { opacity: 0.5; }
+        50% { opacity: 0.8; }
+    }
+
+    .section-projects .section-title {
+        color: #333;
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        text-shadow: 0 2px 4px rgba(206, 224, 2, 0.1);
+    }
+    
+    .section-projects .section-subtitle {
+        color: #666;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        margin-bottom: 3rem;
+    }
+
+    .explosive-projects-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .explosive-project-card {
+        position: relative;
+        height: 350px;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        cursor: pointer;
+        box-shadow: 
+            0 8px 25px rgba(0, 0, 0, 0.1),
+            0 0 0 1px rgba(206, 224, 2, 0.1);
+        background: #fff;
+    }
+
+    .explosive-project-card::before {
+        content: '';
+        position: absolute;
+        top: -1px;
+        left: -1px;
+        right: -1px;
+        bottom: -1px;
+        background: linear-gradient(45deg, #cee002, #ffd700, #cee002);
+        background-size: 200% 200%;
+        border-radius: 13px;
+        z-index: -1;
+        animation: borderGlow 3s ease infinite;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    .explosive-project-card:hover::before {
+        opacity: 0.8;
+    }
+
+    @keyframes borderGlow {
+        0%, 100% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+    }
+
+    .explosive-project-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 
+            0 15px 35px rgba(0, 0, 0, 0.15),
+            0 0 15px rgba(206, 224, 2, 0.2);
+    }
+
+    .project-image-container {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .project-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.4s ease;
+        filter: brightness(0.9);
+    }
+
+    .explosive-project-card:hover .project-image-container img {
+        transform: scale(1.05);
+        filter: brightness(1);
+    }
+
+    .project-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(
+            135deg,
+            rgba(0, 0, 0, 0.7) 0%,
+            rgba(206, 224, 2, 0.1) 50%,
+            rgba(0, 0, 0, 0.8) 100%
+        );
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 25px;
+        opacity: 0;
+        transition: all 0.4s ease;
+    }
+
+    .explosive-project-card:hover .project-overlay {
+        opacity: 1;
+    }
+
+    .project-number {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        width: 40px;
+        height: 40px;
+        background: linear-gradient(135deg, #cee002, #a8b800);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #000;
+        box-shadow: 0 4px 12px rgba(206, 224, 2, 0.3);
+    }
+
+    .project-title-explosive {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 10px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        transform: translateY(20px);
+        transition: transform 0.4s ease;
+    }
+
+    .explosive-project-card:hover .project-title-explosive {
+        transform: translateY(0);
+    }
+
+    .project-description-explosive {
+        font-size: 0.9rem;
+        color: rgba(255, 255, 255, 0.9);
+        line-height: 1.5;
+        margin-bottom: 15px;
+        transform: translateY(20px);
+        transition: transform 0.4s ease 0.1s;
+    }
+
+    .explosive-project-card:hover .project-description-explosive {
+        transform: translateY(0);
+    }
+
+    .project-cta-explosive {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px 20px;
+        background: linear-gradient(135deg, #cee002, #ffd700);
+        color: #000;
+        text-decoration: none;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        border-radius: 25px;
+        font-size: 0.85rem;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(206, 224, 2, 0.3);
+        transform: translateY(20px);
+        align-self: flex-start;
+    }
+
+    .explosive-project-card:hover .project-cta-explosive {
+        transform: translateY(0);
+        box-shadow: 0 6px 16px rgba(206, 224, 2, 0.4);
+    }
+
+    .project-cta-explosive i {
+        transition: transform 0.3s ease;
+    }
+
+    .project-cta-explosive:hover i {
+        transform: translateX(5px);
+    }
+
+    /* Explosive particles effect */
+    .explosive-project-card::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 0;
+        height: 0;
+        background: radial-gradient(circle, rgba(206, 224, 2, 0.8) 0%, transparent 70%);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    .explosive-project-card:hover::after {
+        width: 300px;
+        height: 300px;
+        opacity: 0;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .section-projects .section-title {
+            font-size: 2rem;
+        }
+        
+        .explosive-projects-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 15px 10px;
+        }
+        
+        .explosive-project-card {
+            height: 300px;
+        }
+        
+        .project-title-explosive {
+            font-size: 1.3rem;
+        }
+        
+        .project-description-explosive {
+            font-size: 0.85rem;
+        }
+    }
+  </style>
   
 </head>
 <body>
@@ -268,7 +532,7 @@
                 data-splitin="chars" 
                 data-splitout="none" 
                 data-responsive_offset="on" 
-                data-elementdelay="0.05" style="font-weight:600; letter-spacing:-0.05em;">Small<br> House Near<br> Wroclaw
+                data-elementdelay="0.05" style="font-weight:600; letter-spacing:-0.05em;">Casa<br> Crispina<br> Residence
               </div>
 
               <!-- Layer 6 -->
@@ -412,7 +676,7 @@
                 data-splitin="chars" 
                 data-splitout="none" 
                 data-responsive_offset="on" 
-                data-elementdelay="0.05" style="font-weight:600; letter-spacing:-0.05em;">The luxury<br> residence in<br> forest
+                data-elementdelay="0.05" style="font-weight:600; letter-spacing:-0.05em;">Project<br> Grandiose<br> Complex
               </div>
 
 
@@ -557,7 +821,7 @@
                 data-splitin="chars" 
                 data-splitout="none" 
                 data-responsive_offset="on" 
-                data-elementdelay="0.05" style="font-weight:600; letter-spacing:-0.05em;">Redesign<br>Interior For<br>Villa
+                data-elementdelay="0.05" style="font-weight:600; letter-spacing:-0.05em;">Project<br>Vertika<br>Tower
               </div>
 
 
@@ -691,146 +955,116 @@
       <section id="projects" class="section-projects section">
         <div class="container">
           <div class="row">
-            <div class="col-lg-5">
-               <h2 class="section-title">Latest Projects</h2>
-            </div>        
-            <div class="col-lg-7">
-              <div class="filter-content">
-                <ul class="filter-carousel filter pull-lg-right js-filter-carousel">
-                  <li class="active"><a href="#" class="all" data-filter="*">All</a></li>
-                  <li><a href="#" data-filter=".building">Building </a></li>
-                  <li><a href="#" data-filter=".interior-exterior"> Exterior </a></li>
-                </ul>
+            <div class="col-md-3">
+              <div class="section-info">
+                <div class="title-hr wow fadeInLeft"></div>
+                <div class="info-title">Latest Projects</div>
               </div>
+            </div>
+            <div class="col-md-9">
+              <h2 class="section-title">Building Timeless Designs</h2>
+              <p class="section-subtitle">Explore our portfolio of exceptional architectural achievements that showcase our commitment to innovation, sustainability, and design excellence. Each project represents a unique story of collaboration and creativity.</p>
             </div>
           </div>
         </div>
-        <div class="project-carousel owl-carousel">
-
-          <!-- Project Carousel Item 1 -->
-          <a href="#project1" class="project-item item-shadow popup-with-zoom-anim building">
-            <img alt="" class="img-responsive" src="images/projects/ext1.jpg">
-            <div class="project-hover">
-              <div class="project-hover-content">
-                <h3 class="project-title">Triangle<br>Concrete House<br>On Lake</h3>
-                <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipil pcing elit. Proin nunc leo, rhoncus sit amet tolil arcu vel, pharetra volutpat sem lorn Donec tincidunt velit nec laoreet semper...</p>
-              </div>
-            </div>
-            <span class="link-arrow">See project <i class="icon ion-ios-arrow-right"></i></span>
-          </a>
+        
+        <!-- New Explosive Projects Grid -->
+        <div class="explosive-projects-grid">
           
-          <!-- Project Carousel Item 2 -->
-          <a href="#project2" class="project-item item-shadow popup-with-zoom-anim building">
-            <img alt="" class="img-responsive" src="images/projects/ext2.jpg">
-            <div class="project-hover">
-              <div class="project-hover-content">
-                <h3 class="project-title">Rectangular<br>House Near<br>Italy</h3>
-                <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipil pcing elit. Proin nunc leo, rhoncus sit amet tolil arcu vel, pharetra volutpat sem lorn Donec tincidunt velit nec laoreet semper...</p>
-              </div>
+          <!-- Project 1: Casa Crispina -->
+          <div class="explosive-project-card">
+            <div class="project-number">01</div>
+            <div class="project-image-container">
+              <img alt="Casa Crispina" src="images/projects/ext1.jpg">
             </div>
-            <span class="link-arrow">See project <i class="icon ion-ios-arrow-right"></i></span>
-          </a>
-          
-          <!-- Project Carousel Item 3 -->
-          <a href="#project3" class="project-item item-shadow popup-with-zoom-anim building">
-            <img alt="" class="img-responsive" src="images/projects/ext3.jpg">
-            <div class="project-hover">
-              <div class="project-hover-content">
-                <h3 class="project-title">Milko<br>Co-Working<br>Building</h3>
-                <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipil pcing elit. Proin nunc leo, rhoncus sit amet tolil arcu vel, pharetra volutpat sem lorn Donec tincidunt velit nec laoreet semper...</p>
-              </div>
+            <div class="project-overlay">
+              <h3 class="project-title-explosive">Casa Crispina</h3>
+              <p class="project-description-explosive">An exquisite residential masterpiece featuring modern architectural elements with sustainable design principles. This luxurious home combines comfort with cutting-edge innovation.</p>
+              <a href="#project1" class="project-cta-explosive popup-with-zoom-anim">
+                Explore Project <i class="icon ion-ios-arrow-right"></i>
+              </a>
             </div>
-            <span class="link-arrow">See project <i class="icon ion-ios-arrow-right"></i></span>
-          </a>
+          </div>
 
-          <!-- Project Carousel Item 4 -->
-          <a href="#project4" class="project-item item-shadow popup-with-zoom-anim building">
-            <img alt="" class="img-responsive" src="images/projects/ext4.jpg">
-            <div class="project-hover">
-              <div class="project-hover-content">
-                <h3 class="project-title">Redesign<br>Interior For<br>Villa</h3>
-                <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipil pcing elit. Proin nunc leo, rhoncus sit amet tolil arcu vel, pharetra volutpat sem lorn Donec tincidunt velit nec laoreet semper...</p>
-              </div>
+          <!-- Project 2: Project Grandiose -->
+          <div class="explosive-project-card">
+            <div class="project-number">02</div>
+            <div class="project-image-container">
+              <img alt="Project Grandiose" src="images/projects/ext2.jpg">
             </div>
-            <span class="link-arrow">See project <i class="icon ion-ios-arrow-right"></i></span>
-          </a>
+            <div class="project-overlay">
+              <h3 class="project-title-explosive">Project Grandiose</h3>
+              <p class="project-description-explosive">A magnificent commercial complex that redefines urban architecture. This ambitious project showcases our expertise in large-scale construction and innovative design solutions.</p>
+              <a href="#project2" class="project-cta-explosive popup-with-zoom-anim">
+                Explore Project <i class="icon ion-ios-arrow-right"></i>
+              </a>
+            </div>
+          </div>
 
-          <!-- Project Carousel Item 5 -->
-          <a href="#project5" class="project-item item-shadow popup-with-zoom-anim interior-exterior">
-            <img alt="" class="img-responsive" src="images/projects/ext5.jpg">
-            <div class="project-hover">
-              <div class="project-hover-content">
-                <h3 class="project-title">Wooden<br>Hozirontal<br>Villa</h3>
-                <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipil pcing elit. Proin nunc leo, rhoncus sit amet tolil arcu vel, pharetra volutpat sem lorn Donec tincidunt velit nec laoreet semper...</p>
-              </div>
+          <!-- Project 3: Project Vertika -->
+          <div class="explosive-project-card">
+            <div class="project-number">03</div>
+            <div class="project-image-container">
+              <img alt="Project Vertika" src="images/projects/ext3.jpg">
             </div>
-            <span class="link-arrow">See project <i class="icon ion-ios-arrow-right"></i></span>
-          </a>
+            <div class="project-overlay">
+              <h3 class="project-title-explosive">Project Vertika</h3>
+              <p class="project-description-explosive">A stunning vertical development that pushes the boundaries of contemporary architecture. This tower represents our commitment to creating iconic structures that define skylines.</p>
+              <a href="#project3" class="project-cta-explosive popup-with-zoom-anim">
+                Explore Project <i class="icon ion-ios-arrow-right"></i>
+              </a>
+            </div>
+          </div>
 
-          <!-- Project Carousel Item 6 -->
-          <a href="#project6" class="project-item item-shadow popup-with-zoom-anim interior-exterior">
-            <img alt="" class="img-responsive" src="images/projects/ext6.jpg">
-            <div class="project-hover">
-              <div class="project-hover-content">
-                <h3 class="project-title">Small<br>House Near<br>Wroclaw</h3>
-                <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipil pcing elit. Proin nunc leo, rhoncus sit amet tolil arcu vel, pharetra volutpat sem lorn Donec tincidunt velit nec laoreet semper...</p>
-              </div>
+          <!-- Project 4: Project Genesis -->
+          <div class="explosive-project-card">
+            <div class="project-number">04</div>
+            <div class="project-image-container">
+              <img alt="Project Genesis" src="images/projects/ext4.jpg">
             </div>
-            <span class="link-arrow">See project <i class="icon ion-ios-arrow-right"></i></span>
-          </a>
+            <div class="project-overlay">
+              <h3 class="project-title-explosive">Project Genesis</h3>
+              <p class="project-description-explosive">The beginning of a new era in architectural excellence. This groundbreaking project showcases innovative construction techniques and sustainable building practices.</p>
+              <a href="#project4" class="project-cta-explosive popup-with-zoom-anim">
+                Explore Project <i class="icon ion-ios-arrow-right"></i>
+              </a>
+            </div>
+          </div>
 
-          <!-- Project Carousel Item 7 -->
-          <!-- <a href="#project7" class="project-item item-shadow popup-with-zoom-anim interior-exterior">
-            <img alt="" class="img-responsive" src="https://i.postimg.cc/G90nCy8d/lux.png">
-            <div class="project-hover">
-              <div class="project-hover-content">
-                <h3 class="project-title">The luxury<br> residence in<br> forest</h3>
-                <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipil pcing elit. Proin nunc leo, rhoncus sit amet tolil arcu vel, pharetra volutpat sem lorn Donec tincidunt velit nec laoreet semper...</p>
-              </div>
-            </div>
-            <span class="link-arrow">See project <i class="icon ion-ios-arrow-right"></i></span>
-          </a> -->
-
-          <!-- Project Carousel Item 8 -->
-          <!-- <a href="#project8" class="project-item item-shadow popup-with-zoom-anim interior-exterior">
-            <img alt="" class="img-responsive" src="images/projects/ext1.jpg">
-            <div class="project-hover">
-              <div class="project-hover-content">
-                <h3 class="project-title">Cubic<br>Inter Mesuem<br>In Rome</h3>
-                <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipil pcing elit. Proin nunc leo, rhoncus sit amet tolil arcu vel, pharetra volutpat sem lorn Donec tincidunt velit nec laoreet semper...</p>
-              </div>
-            </div>
-            <span class="link-arrow">See project <i class="icon ion-ios-arrow-right"></i></span>
-          </a> -->
+        </div>
+        
+        <!-- Keep old carousel hidden for fallback -->
+        <div class="project-carousel owl-carousel" style="display: none;">
+          <!-- Old carousel content kept for reference -->
         </div>
 
         <!-- Project Modal Dialog 1 -->
         <div id="project1" class="container zoom-anim-dialog mfp-hide">
           <div class="row">
-            <div class="col-lg-8"><img alt="" class="project-detail-img" src="images/projects/ext1.jpg"></div>
+            <div class="col-lg-8"><img alt="Casa Crispina" class="project-detail-img" src="images/projects/ext1.jpg"></div>
             <div class="col-lg-4">
-              <h3 class="project-detail-title">Triangle Concrete House On Lake</h3>
-              <p class="project-detail-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut. magna aliquam erat volutpat enim ad minim veniam. Duis autem vel eum iriure dolor in hendrerit in.</p>
+              <h3 class="project-detail-title">Casa Crispina</h3>
+              <p class="project-detail-text">Casa Crispina represents the pinnacle of modern residential architecture, seamlessly blending luxury with sustainability. This exquisite home features innovative design elements, premium materials, and cutting-edge technology to create a living space that transcends conventional boundaries.</p>
               <ul class="project-detail-list text-dark">
                 <li>
-                  <span class="left">Clients:</span>
-                  <span class="right">Ethan Hunt, John Doe</span>
+                  <span class="left">Client:</span>
+                  <span class="right">Private Residence</span>
                 </li>
                 <li>
                   <span class="left">Completion:</span>
-                  <span class="right">February 5th, 2019</span>
+                  <span class="right">March 2024</span>
                 </li>
                 <li>
                   <span class="left">Project Type:</span>
-                  <span class="right">Villa, Residence</span>
+                  <span class="right">Luxury Residence</span>
                 </li>
                 <li>
                   <span class="left">Architects:</span>
-                  <span class="right">Logan Cee, Paul</span>
+                  <span class="right">Dextera Dei Team</span>
                 </li>
                 <li>
-                  <span class="left">Budget:</span>
-                  <span class="right">$1 200 000</span>
+                  <span class="left">Investment:</span>
+                  <span class="right">$2,500,000</span>
                 </li>
               </ul>
               <div class="project-detail-meta">
@@ -849,30 +1083,30 @@
         <!-- Project Modal Dialog 2 -->
         <div id="project2" class="container zoom-anim-dialog mfp-hide">
           <div class="row">
-            <div class="col-lg-8"><img alt="" class="project-detail-img" src="images/projects/ext2.jpg"></div>
+            <div class="col-lg-8"><img alt="Project Grandiose" class="project-detail-img" src="images/projects/ext2.jpg"></div>
             <div class="col-lg-4">
-              <h3 class="project-detail-title">Rectangular House Near Italy</h3>
-              <p class="project-detail-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut. magna aliquam erat volutpat enim ad minim veniam. Duis autem vel eum iriure dolor in hendrerit in.</p>
+              <h3 class="project-detail-title">Project Grandiose</h3>
+              <p class="project-detail-text">Project Grandiose stands as a testament to our expertise in large-scale commercial development. This magnificent complex redefines urban architecture with its bold design, sustainable features, and innovative construction methodologies that set new standards in the industry.</p>
               <ul class="project-detail-list text-dark">
                 <li>
-                  <span class="left">Clients:</span>
-                  <span class="right">Ethan Hunt, John Doe</span>
+                  <span class="left">Client:</span>
+                  <span class="right">Commercial Consortium</span>
                 </li>
                 <li>
                   <span class="left">Completion:</span>
-                  <span class="right">February 5th, 2019</span>
+                  <span class="right">June 2024</span>
                 </li>
                 <li>
                   <span class="left">Project Type:</span>
-                  <span class="right">Villa, Residence</span>
+                  <span class="right">Commercial Complex</span>
                 </li>
                 <li>
                   <span class="left">Architects:</span>
-                  <span class="right">Logan Cee, Paul</span>
+                  <span class="right">Dextera Dei Team</span>
                 </li>
                 <li>
-                  <span class="left">Budget:</span>
-                  <span class="right">$1 200 000</span>
+                  <span class="left">Investment:</span>
+                  <span class="right">$15,000,000</span>
                 </li>
               </ul>
               <div class="project-detail-meta">
@@ -891,30 +1125,30 @@
         <!-- Project Modal Dialog 3 -->
         <div id="project3" class="container zoom-anim-dialog mfp-hide">
           <div class="row">
-            <div class="col-lg-8"><img alt="" class="project-detail-img" src="images/projects/ext3.jpg"></div>
+            <div class="col-lg-8"><img alt="Project Vertika" class="project-detail-img" src="images/projects/ext3.jpg"></div>
             <div class="col-lg-4">
-              <h3 class="project-detail-title">Milko Co-Working Building</h3>
-              <p class="project-detail-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut. magna aliquam erat volutpat enim ad minim veniam. Duis autem vel eum iriure dolor in hendrerit in.</p>
+              <h3 class="project-detail-title">Project Vertika</h3>
+              <p class="project-detail-text">Project Vertika pushes the boundaries of vertical architecture, creating an iconic tower that defines the skyline. This stunning development showcases our mastery of contemporary design principles while incorporating advanced engineering solutions and sustainable technologies.</p>
               <ul class="project-detail-list text-dark">
                 <li>
-                  <span class="left">Clients:</span>
-                  <span class="right">Ethan Hunt, John Doe</span>
+                  <span class="left">Client:</span>
+                  <span class="right">Urban Development Corp</span>
                 </li>
                 <li>
                   <span class="left">Completion:</span>
-                  <span class="right">February 5th, 2019</span>
+                  <span class="right">September 2024</span>
                 </li>
                 <li>
                   <span class="left">Project Type:</span>
-                  <span class="right">Villa, Residence</span>
+                  <span class="right">High-Rise Tower</span>
                 </li>
                 <li>
                   <span class="left">Architects:</span>
-                  <span class="right">Logan Cee, Paul</span>
+                  <span class="right">Dextera Dei Team</span>
                 </li>
                 <li>
-                  <span class="left">Budget:</span>
-                  <span class="right">$1 200 000</span>
+                  <span class="left">Investment:</span>
+                  <span class="right">$45,000,000</span>
                 </li>
               </ul>
               <div class="project-detail-meta">
@@ -933,30 +1167,30 @@
         <!-- Project Modal Dialog 4 -->
         <div id="project4" class="container zoom-anim-dialog mfp-hide">
           <div class="row">
-            <div class="col-lg-8"><img alt="" class="project-detail-img" src="images/projects/ext4.jpg"></div>
+            <div class="col-lg-8"><img alt="Project Genesis" class="project-detail-img" src="images/projects/ext4.jpg"></div>
             <div class="col-lg-4">
-              <h3 class="project-detail-title">Redesign Interior For Villa</h3>
-              <p class="project-detail-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut. magna aliquam erat volutpat enim ad minim veniam. Duis autem vel eum iriure dolor in hendrerit in.</p>
+              <h3 class="project-detail-title">Project Genesis</h3>
+              <p class="project-detail-text">Project Genesis marks the beginning of a new era in architectural excellence. This groundbreaking development showcases revolutionary construction techniques, sustainable building practices, and innovative design solutions that will shape the future of architecture.</p>
               <ul class="project-detail-list text-dark">
                 <li>
-                  <span class="left">Clients:</span>
-                  <span class="right">Ethan Hunt, John Doe</span>
+                  <span class="left">Client:</span>
+                  <span class="right">Genesis Foundation</span>
                 </li>
                 <li>
                   <span class="left">Completion:</span>
-                  <span class="right">February 5th, 2019</span>
+                  <span class="right">December 2024</span>
                 </li>
                 <li>
                   <span class="left">Project Type:</span>
-                  <span class="right">Villa, Residence</span>
+                  <span class="right">Mixed-Use Development</span>
                 </li>
                 <li>
                   <span class="left">Architects:</span>
-                  <span class="right">Logan Cee, Paul</span>
+                  <span class="right">Dextera Dei Team</span>
                 </li>
                 <li>
-                  <span class="left">Budget:</span>
-                  <span class="right">$1 200 000</span>
+                  <span class="left">Investment:</span>
+                  <span class="right">$8,750,000</span>
                 </li>
               </ul>
               <div class="project-detail-meta">
@@ -1505,6 +1739,35 @@
   <script src="js/rev-slider-init.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
   <script src="js/firebase.js"></script> 
-  <script src="js/scripts.js"></script> 
+  <script src="js/scripts.js"></script>
+  
+  <!-- Enhanced Projects Animation Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Simple entrance animations for project cards
+      const projectCards = document.querySelectorAll('.explosive-project-card');
+      
+      // Intersection Observer for entrance animations
+      const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            const index = Array.from(projectCards).indexOf(entry.target);
+            setTimeout(function() {
+              entry.target.style.opacity = '1';
+              entry.target.style.transform = 'translateY(0)';
+            }, index * 150);
+          }
+        });
+      }, { threshold: 0.1 });
+      
+      // Initialize cards
+      projectCards.forEach(function(card) {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'all 0.6s ease';
+        observer.observe(card);
+      });
+    });
+  </script> 
 </body>
 </html>
