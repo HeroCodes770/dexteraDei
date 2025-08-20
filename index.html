@@ -1,4 +1,4 @@
-<!DOCTYPE HTML>
+`<!DOCTYPE HTML>
 <html lang="en">
 
 <head>
@@ -24,43 +24,14 @@
   <link href="css/style.css" rel="stylesheet" media="screen">
 
   <!--Styles for the what we do section-->
-  <style>
-    .container {
-      width: 100%;
-      margin-top: 5rem;
-      padding: 0 1rem;
-    }
 
-    .row-services {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 1rem;
-    }
-
-    .col-service {
-      padding: 2rem;
-      background-color: #f9f9f9;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      text-align: center;
-    }
-
-    @media (max-width: 1024px) {
-      .row-services {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-
-    @media (max-width: 768px) {
-      .row-services {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
 
 </head>
 
 <body>
+
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress"></div>
 
   <!-- Loader -->
   <div class="loader">
@@ -70,7 +41,7 @@
     </div>
   </div>
 
-  <div class="wrapper boxed">
+  <div class="wrapper">
 
     <!-- Content CLick Capture-->
     <div class="click-capture"></div>
@@ -114,7 +85,7 @@
     </div>
 
     <!-- Navbar -->
-    <header class="navbar boxed js-navbar">
+    <header class="navbar js-navbar">
 
       <!-- Brand -->
       <a class="brand" href="#">
@@ -189,7 +160,7 @@
               data-fsmasterspeed="1000">
 
               <!-- Main image-->
-              <img src="images/slider/slide1.jpg" data-bgparallax="5" alt="" data-bgposition="center 0"
+              <img src="images/slider/slider_1.jpg" data-bgparallax="5" alt="" data-bgposition="center 0"
                 data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
 
               <!-- Layer 1 -->
@@ -236,7 +207,7 @@
                 data-mask_in="x:50px;y:0px;s:inherit;e:inherit;"
                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="500" data-splitin="chars"
                 data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05"
-                style="font-weight:600; letter-spacing:-0.05em;">Small<br> House Near<br> Wroclaw
+                style="font-weight:600; letter-spacing:-0.05em;">Casa<br> Bloom<br> Residence
               </div>
 
               <!-- Layer 6 -->
@@ -273,7 +244,7 @@
               data-fsmasterspeed="1000">
 
               <!-- Main image-->
-              <img src="https://i.postimg.cc/15mTx7LX/nwe.jpg" data-bgparallax="5" alt="" data-bgposition="center 0"
+              <img src="images/slider/slider_2.jpg" data-bgparallax="5" alt="" data-bgposition="center 0"
                 data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
 
               <!-- Layer 1 -->
@@ -320,7 +291,7 @@
                 data-mask_in="x:50px;y:0px;s:inherit;e:inherit;"
                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="500" data-splitin="chars"
                 data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05"
-                style="font-weight:600; letter-spacing:-0.05em;">The luxury<br> residence in<br> forest
+                style="font-weight:600; letter-spacing:-0.05em;">Project<br> Vertika<br> Tower
               </div>
 
 
@@ -358,7 +329,7 @@
               data-fsmasterspeed="1000">
 
               <!-- Main image-->
-              <img src="images/slider/slide2.jpg" data-bgparallax="5" alt="" data-bgposition="center 0"
+              <img src="images/slider/slider_3.jpg" data-bgparallax="5" alt="" data-bgposition="center 0"
                 data-bgfit="cover" data-bgrepeat="no-repeat" class="rev-slidebg">
 
               <!-- Layer 1 -->
@@ -405,7 +376,7 @@
                 data-mask_in="x:50px;y:0px;s:inherit;e:inherit;"
                 data-mask_out="x:inherit;y:inherit;s:inherit;e:inherit;" data-start="500" data-splitin="chars"
                 data-splitout="none" data-responsive_offset="on" data-elementdelay="0.05"
-                style="font-weight:600; letter-spacing:-0.05em;">Redesign<br>Interior For<br>Villa
+                style="font-weight:600; letter-spacing:-0.05em;">Project<br>Villa<br>Elegance
               </div>
 
 
@@ -496,207 +467,265 @@
           </div>
         </div>
       </section> -->
-      <section class="bg-dots">
+      
+      <!-- What We Do Section - Redesigned -->
+      <section id="about" class="what-we-do-section">
         <div class="container">
-          <div class="row gap-2">
-            <div class="row">
-              <strong class="section-subtitle">What We Do</strong>
-              <div class="section-info">
-
-                <div class="title-hr wow fadeInLeft"></div>
-                <div class="info-title fs-3">The ABCD of Real Estate Development</div>
+          <div class="row">
+            <div class="col-12 text-center mb-5">
+              <div class="section-header">
+                <span class="section-subtitle">What We Do</span>
+                <h2 class="section-title">The ABCD of Real Estate Development</h2>
+                <div class="title-underline"></div>
+                <p class="section-description">We are committed to delivering exceptional results through our comprehensive approach to real estate development.</p>
               </div>
             </div>
-            <div class="row">
-              <div class="row-services">
-                <div class="col-service wow fadeInUp">
-                  <span class="text-dark icon icon-apartment"></span>
+          </div>
+          
+          <div class="row">
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="service-card wow fadeInUp" data-wow-delay="0.1s">
+                <div class="service-icon">
+                  <span class="icon icon-apartment"></span>
+                </div>
+                <div class="service-content">
                   <h4>Architecture</h4>
-                  <p>Shaping visionary structures that blend functionality, beauty, and purpose, creating spaces that
-                    stand the test of time.</p>
+                  <p>Shaping visionary structures that blend functionality, beauty, and purpose, creating spaces that stand the test of time.</p>
+                  <div class="service-features">
+                    <span class="feature-tag">Design</span>
+                    <span class="feature-tag">Planning</span>
+                    <span class="feature-tag">Innovation</span>
+                  </div>
                 </div>
-                <div class="col-service wow fadeInUp">
-                  <span class="text-dark icon icon-construction"></span>
-                  <h4>Building (Construction)
-                  </h4>
-                  <p>Transforming concepts into reality with precision and craftsmanship, delivering enduring structures
-                    that inspire confidence. </p>
-                </div>
-                <div class="col-service wow fadeInUp" data-wow-delay="0.4s">
-                  <span class="text-dark icon icon-couch"></span>
-                  <h4>Consultation</h4>
-                  <p>Providing expert guidance to align visions with practical solutions, ensuring every project
-                    fulfills its potential seamlessly.
-                  </p>
-                </div>
-
-                <div class="col-service wow fadeInUp" data-wow-delay="0.8s">
-                  <span class="text-dark icon icon-pencil-ruler"></span>
-                  <h4>Design </h4>
-                  <p>Infusing creativity and innovation to craft spaces that reflect identity, purpose, and elegance.
-                  </p>
-                </div>
-
-
               </div>
             </div>
-
-      </section>i
-
+            
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="service-card wow fadeInUp" data-wow-delay="0.2s">
+                <div class="service-icon">
+                  <span class="icon icon-construction"></span>
+                </div>
+                <div class="service-content">
+                  <h4>Building</h4>
+                  <p>Transforming concepts into reality with precision and craftsmanship, delivering enduring structures that inspire confidence.</p>
+                  <div class="service-features">
+                    <span class="feature-tag">Construction</span>
+                    <span class="feature-tag">Quality</span>
+                    <span class="feature-tag">Execution</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="service-card wow fadeInUp" data-wow-delay="0.3s">
+                <div class="service-icon">
+                  <span class="icon icon-couch"></span>
+                </div>
+                <div class="service-content">
+                  <h4>Consultation</h4>
+                  <p>Providing expert guidance to align visions with practical solutions, ensuring every project fulfills its potential seamlessly.</p>
+                  <div class="service-features">
+                    <span class="feature-tag">Expertise</span>
+                    <span class="feature-tag">Strategy</span>
+                    <span class="feature-tag">Support</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 mb-4">
+              <div class="service-card wow fadeInUp" data-wow-delay="0.4s">
+                <div class="service-icon">
+                  <span class="icon icon-pencil-ruler"></span>
+                </div>
+                <div class="service-content">
+                  <h4>Design</h4>
+                  <p>Infusing creativity and innovation to craft spaces that reflect identity, purpose, and elegance.</p>
+                  <div class="service-features">
+                    <span class="feature-tag">Creativity</span>
+                    <span class="feature-tag">Aesthetics</span>
+                    <span class="feature-tag">Function</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Section Projects -->
       <section id="projects" class="section-projects">
         <div class="container">
           <div class="row">
-            <div class="col-lg-5">
-              <h2 class="section-title">Latest Projects</h2>
+            <div class="col-12 text-center mb-5">
+              <div class="projects-header">
+                <span class="section-subtitle">Our Portfolio</span>
+                <h2 class="section-title">Latest Projects</h2>
+                <div class="title-underline"></div>
+                <p class="section-description">Explore our portfolio of exceptional architectural achievements that showcase our commitment to innovation, sustainability, and design excellence.</p>
+              </div>
             </div>
-            <div class="col-lg-7">
-              <div class="filter-content">
-                <ul class="filter-carousel filter pull-lg-right js-filter-carousel">
-                  <li class="active"><a href="#" class="all" data-filter="*">All</a></li>
-                  <li><a href="#" data-filter=".building">Building </a></li>
-                  <li><a href="#" data-filter=".interior-exterior"> Exterior </a></li>
+          </div>
+          
+          <!-- Project Filters -->
+          <div class="row mb-5">
+            <div class="col-12">
+              <div class="project-filters text-center">
+                <ul class="filter-list">
+                  <li class="filter-item active" data-filter="*">
+                    <span class="filter-btn">All Projects</span>
+                  </li>
+                  <li class="filter-item" data-filter=".building">
+                    <span class="filter-btn">Building</span>
+                  </li>
+                  <li class="filter-item" data-filter=".interior-exterior">
+                    <span class="filter-btn">Interior & Exterior</span>
+                  </li>
                 </ul>
               </div>
             </div>
-            <div class="col-md-9">
-              <h2 class="section-title">Building Timeless Designs</h2>
-              <p class="section-subtitle">Explore our portfolio of exceptional architectural achievements that showcase our commitment to innovation, sustainability, and design excellence. Each project represents a unique story of collaboration and creativity.</p>
-            </div>
           </div>
-        </div>
-        <div class="project-carousel owl-carousel">
-
-          <!-- Project Carousel Item 1 -->
-          <a href="#project1" class="project-item item-shadow popup-with-zoom-anim building">
-            <img alt="" class="img-responsive" src="images/projects/ext1.jpg">
-            <div class="project-hover">
-              <div class="project-hover-content">
-                <h3 class="project-title">Triangle<br>Concrete House<br>On Lake</h3>
-                <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipil pcing elit. Proin nunc
-                  leo, rhoncus sit amet tolil arcu vel, pharetra volutpat sem lorn Donec tincidunt velit nec laoreet
-                  semper...</p>
-              </div>
-            </div>
-            <span class="link-arrow">See project <i class="icon ion-ios-arrow-right"></i></span>
-          </a>
-
-          <!-- Project Carousel Item 2 -->
-          <a href="#project2" class="project-item item-shadow popup-with-zoom-anim building">
-            <img alt="" class="img-responsive" src="images/projects/ext2.jpg">
-            <div class="project-hover">
-              <div class="project-hover-content">
-                <h3 class="project-title">Rectangular<br>House Near<br>Italy</h3>
-                <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipil pcing elit. Proin nunc
-                  leo, rhoncus sit amet tolil arcu vel, pharetra volutpat sem lorn Donec tincidunt velit nec laoreet
-                  semper...</p>
-              </div>
-            </div>
-            <span class="link-arrow">See project <i class="icon ion-ios-arrow-right"></i></span>
-          </a>
-
-          <!-- Project Carousel Item 3 -->
-          <a href="#project3" class="project-item item-shadow popup-with-zoom-anim building">
-            <img alt="" class="img-responsive" src="images/projects/ext3.jpg">
-            <div class="project-hover">
-              <div class="project-hover-content">
-                <h3 class="project-title">Milko<br>Co-Working<br>Building</h3>
-                <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipil pcing elit. Proin nunc
-                  leo, rhoncus sit amet tolil arcu vel, pharetra volutpat sem lorn Donec tincidunt velit nec laoreet
-                  semper...</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Project Carousel Item 4 -->
-          <a href="#project4" class="project-item item-shadow popup-with-zoom-anim building">
-            <img alt="" class="img-responsive" src="images/projects/ext4.jpg">
-            <div class="project-hover">
-              <div class="project-hover-content">
-                <h3 class="project-title">Redesign<br>Interior For<br>Villa</h3>
-                <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipil pcing elit. Proin nunc
-                  leo, rhoncus sit amet tolil arcu vel, pharetra volutpat sem lorn Donec tincidunt velit nec laoreet
-                  semper...</p>
-              </div>
-            </div>
-            <div class="project-overlay">
-              <h3 class="project-title-explosive">Project Grandiose</h3>
-              <p class="project-description-explosive">A magnificent commercial complex that redefines urban architecture. This ambitious project showcases our expertise in large-scale construction and innovative design solutions.</p>
-              <a href="#project2" class="project-cta-explosive popup-with-zoom-anim">
-                Explore Project <i class="icon ion-ios-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Project Carousel Item 5 -->
-          <a href="#project5" class="project-item item-shadow popup-with-zoom-anim interior-exterior">
-            <img alt="" class="img-responsive" src="images/projects/ext5.jpg">
-            <div class="project-hover">
-              <div class="project-hover-content">
-                <h3 class="project-title">Wooden<br>Hozirontal<br>Villa</h3>
-                <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipil pcing elit. Proin nunc
-                  leo, rhoncus sit amet tolil arcu vel, pharetra volutpat sem lorn Donec tincidunt velit nec laoreet
-                  semper...</p>
-              </div>
-            </div>
-            <div class="project-overlay">
-              <h3 class="project-title-explosive">Project Vertika</h3>
-              <p class="project-description-explosive">A stunning vertical development that pushes the boundaries of contemporary architecture. This tower represents our commitment to creating iconic structures that define skylines.</p>
-              <a href="#project3" class="project-cta-explosive popup-with-zoom-anim">
-                Explore Project <i class="icon ion-ios-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Project Carousel Item 6 -->
-          <a href="#project6" class="project-item item-shadow popup-with-zoom-anim interior-exterior">
-            <img alt="" class="img-responsive" src="images/projects/ext6.jpg">
-            <div class="project-hover">
-              <div class="project-hover-content">
-                <h3 class="project-title">Small<br>House Near<br>Wroclaw</h3>
-                <p class="project-description">Lorem ipsum dolor sit amet, consectetur adipil pcing elit. Proin nunc
-                  leo, rhoncus sit amet tolil arcu vel, pharetra volutpat sem lorn Donec tincidunt velit nec laoreet
-                  semper...</p>
-              </div>
-            </div>
-            <div class="project-overlay">
-              <h3 class="project-title-explosive">Project Genesis</h3>
-              <p class="project-description-explosive">The beginning of a new era in architectural excellence. This groundbreaking project showcases innovative construction techniques and sustainable building practices.</p>
-              <a href="#project4" class="project-cta-explosive popup-with-zoom-anim">
-                Explore Project <i class="icon ion-ios-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
+          
         </div>
         
-        <!-- Keep old carousel hidden for fallback -->
-        <div class="project-carousel owl-carousel" style="display: none;">
-          <!-- Old carousel content kept for reference -->
+        <!-- Full Width Projects Showcase -->
+        <div class="projects-container">
+          <div class="projects-grid">
+            <!-- Casa Bloom Project -->
+            <div class="project-item building" data-category="building">
+              <div class="project-image">
+                <img src="images/projects/Casa Bloom/project1.jpg" alt="Casa Bloom">
+                <div class="project-overlay">
+                  <div class="project-overlay-content">
+                    <h3>Casa Bloom</h3>
+                    <p>A stunning residential masterpiece that blends modern luxury with natural elegance</p>
+                    <a href="#project1" class="project-btn popup-with-zoom-anim">
+                      <span>Explore Project</span>
+                      <i class="icon ion-ios-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Project Vertika -->
+            <div class="project-item building" data-category="building">
+              <div class="project-image">
+                <img src="images/projects/Project Vertika/Front_facing_view.jpg" alt="Project Vertika">
+                <div class="project-overlay">
+                  <div class="project-overlay-content">
+                    <h3>Project Vertika</h3>
+                    <p>An iconic vertical development pushing the boundaries of contemporary architecture</p>
+                    <a href="#project2" class="project-btn popup-with-zoom-anim">
+                      <span>Explore Project</span>
+                      <i class="icon ion-ios-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Project Villa -->
+            <div class="project-item building" data-category="building">
+              <div class="project-image">
+                <img src="images/projects/Project Villa/exterior_1.jpg" alt="Project Villa">
+                <div class="project-overlay">
+                  <div class="project-overlay-content">
+                    <h3>Project Villa</h3>
+                    <p>Luxury villa design combining modern aesthetics with timeless elegance</p>
+                    <a href="#project3" class="project-btn popup-with-zoom-anim">
+                      <span>Explore Project</span>
+                      <i class="icon ion-ios-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Interior Design Showcase 1 -->
+            <div class="project-item interior-exterior" data-category="interior-exterior">
+              <div class="project-image">
+                <img src="images/projects/interior/interior_1.jpeg" alt="Luxury Interior Design">
+                <div class="project-overlay">
+                  <div class="project-overlay-content">
+                    <h3>Luxury Interior Design</h3>
+                    <p>Sophisticated interior spaces that reflect modern living at its finest</p>
+                    <a href="#project4" class="project-btn popup-with-zoom-anim">
+                      <span>Explore Interior</span>
+                      <i class="icon ion-ios-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Interior Design Showcase 2 -->
+            <div class="project-item interior-exterior" data-category="interior-exterior">
+              <div class="project-image">
+                <img src="images/projects/interior/interior_2.jpeg" alt="Contemporary Interior">
+                <div class="project-overlay">
+                  <div class="project-overlay-content">
+                    <h3>Contemporary Interior</h3>
+                    <p>Clean lines and modern functionality create spaces that inspire daily living</p>
+                    <a href="#project5" class="project-btn popup-with-zoom-anim">
+                      <span>Explore Interior</span>
+                      <i class="icon ion-ios-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Interior Design Showcase 3 -->
+            <div class="project-item interior-exterior" data-category="interior-exterior">
+              <div class="project-image">
+                <img src="images/projects/interior/interior_3.jpeg" alt="Modern Living Spaces">
+                <div class="project-overlay">
+                  <div class="project-overlay-content">
+                    <h3>Modern Living Spaces</h3>
+                    <p>Thoughtfully designed interiors that balance comfort with contemporary style</p>
+                    <a href="#project6" class="project-btn popup-with-zoom-anim">
+                      <span>Explore Interior</span>
+                      <i class="icon ion-ios-arrow-right"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-
-        <!-- Project Modal Dialog 1 -->
+        
+        <!-- Project Modal Dialogs -->
+        <!-- Casa Bloom Project Modal -->
         <div id="project1" class="container zoom-anim-dialog mfp-hide">
           <div class="row">
-            <div class="col-lg-8"><img alt="Casa Crispina" class="project-detail-img" src="images/projects/ext1.jpg"></div>
+            <div class="col-lg-8">
+              <div class="project-gallery">
+                <img alt="Casa Bloom Main" class="project-detail-img" src="images/projects/Casa Bloom/project1.jpg">
+                <div class="project-gallery-thumbs">
+                  <img src="images/projects/Casa Bloom/project1.jpg" alt="Casa Bloom View 1" class="thumb active">
+                  <img src="images/projects/Casa Bloom/ext2.jpg" alt="Casa Bloom View 2" class="thumb">
+                  <img src="images/projects/Casa Bloom/ext3.jpg" alt="Casa Bloom View 3" class="thumb">
+                  <img src="images/projects/Casa Bloom/2025-08-15 17.06.43.jpg" alt="Casa Bloom View 4" class="thumb">
+                </div>
+              </div>
+            </div>
             <div class="col-lg-4">
-              <h3 class="project-detail-title">Triangle Concrete House On Lake</h3>
-              <p class="project-detail-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                nibh euismod tincidunt ut. magna aliquam erat volutpat enim ad minim veniam. Duis autem vel eum iriure
-                dolor in hendrerit in.</p>
+              <h3 class="project-detail-title">Casa Bloom</h3>
+              <p class="project-detail-text">Casa Bloom represents the perfect harmony between modern luxury and natural elegance. This stunning residential masterpiece showcases our commitment to creating spaces that not only impress but also provide unparalleled comfort and functionality for modern living.</p>
               <ul class="project-detail-list text-dark">
                 <li>
                   <span class="left">Client:</span>
-                  <span class="right">Private Residence</span>
+                  <span class="right">Private Luxury Residence</span>
                 </li>
                 <li>
                   <span class="left">Completion:</span>
-                  <span class="right">March 2024</span>
+                  <span class="right">September 2024</span>
                 </li>
                 <li>
                   <span class="left">Project Type:</span>
-                  <span class="right">Luxury Residence</span>
+                  <span class="right">Luxury Residential</span>
                 </li>
                 <li>
                   <span class="left">Architects:</span>
@@ -704,7 +733,7 @@
                 </li>
                 <li>
                   <span class="left">Investment:</span>
-                  <span class="right">$2,500,000</span>
+                  <span class="right">$3,200,000</span>
                 </li>
               </ul>
               <div class="project-detail-meta">
@@ -723,62 +752,24 @@
           </div>
         </div>
 
-        <!-- Project Modal Dialog 2 -->
+        <!-- Project Vertika Modal -->
         <div id="project2" class="container zoom-anim-dialog mfp-hide">
           <div class="row">
-            <div class="col-lg-8"><img alt="Project Grandiose" class="project-detail-img" src="images/projects/ext2.jpg"></div>
-            <div class="col-lg-4">
-              <h3 class="project-detail-title">Rectangular House Near Italy</h3>
-              <p class="project-detail-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                nibh euismod tincidunt ut. magna aliquam erat volutpat enim ad minim veniam. Duis autem vel eum iriure
-                dolor in hendrerit in.</p>
-              <ul class="project-detail-list text-dark">
-                <li>
-                  <span class="left">Client:</span>
-                  <span class="right">Commercial Consortium</span>
-                </li>
-                <li>
-                  <span class="left">Completion:</span>
-                  <span class="right">June 2024</span>
-                </li>
-                <li>
-                  <span class="left">Project Type:</span>
-                  <span class="right">Commercial Complex</span>
-                </li>
-                <li>
-                  <span class="left">Architects:</span>
-                  <span class="right">Dextera Dei Team</span>
-                </li>
-                <li>
-                  <span class="left">Investment:</span>
-                  <span class="right">$15,000,000</span>
-                </li>
-              </ul>
-              <div class="project-detail-meta">
-                <span class="left text-dark hidden-xs pull-sm-left">Share:</span>
-                <div class="social-list pull-sm-right">
-                  <a href="https://twitter.com/dexteradei_?s=11&t=_nSeUtxVF0S56gtu-QBxlw"
-                    class="icon ion-social-twitter"></a>
-                  <a href="https://www.facebook.com/profile.php?id=100093706063512"
-                    class="icon ion-social-facebook"></a>
-                  <a href="https://www.linkedin.com/in/dextera-dei-b9a9b427b/recent-activity/all/"
-                    class="icon ion-social-linkedin"></a>
-                  <a href="mailto:business@dexteradei.com" class="icon ion-email"></a>
+            <div class="col-lg-8">
+              <div class="project-gallery">
+                <img alt="Project Vertika Main" class="project-detail-img" src="images/projects/Project Vertika/Front_facing_view.jpg">
+                <div class="project-gallery-thumbs">
+                  <img src="images/projects/Project Vertika/Front_facing_view.jpg" alt="Vertika Front View" class="thumb active">
+                  <img src="images/projects/Project Vertika/Entrance_view.jpg" alt="Vertika Entrance" class="thumb">
+                  <img src="images/projects/Project Vertika/Back_view.jpg" alt="Vertika Back View" class="thumb">
+                  <img src="images/projects/Project Vertika/OBSERVATION DECK 1.jpg" alt="Vertika Observation Deck" class="thumb">
+                  <img src="images/projects/Project Vertika/front.jpg" alt="Vertika Alternative View" class="thumb">
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-
-        <!-- Project Modal Dialog 3 -->
-        <div id="project3" class="container zoom-anim-dialog mfp-hide">
-          <div class="row">
-            <div class="col-lg-8"><img alt="Project Vertika" class="project-detail-img" src="images/projects/ext3.jpg"></div>
             <div class="col-lg-4">
-              <h3 class="project-detail-title">Milko Co-Working Building</h3>
-              <p class="project-detail-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
-                nibh euismod tincidunt ut. magna aliquam erat volutpat enim ad minim veniam. Duis autem vel eum iriure
-                dolor in hendrerit in.</p>
+              <h3 class="project-detail-title">Project Vertika</h3>
+              <p class="project-detail-text">Project Vertika stands as an iconic vertical development that pushes the boundaries of contemporary architecture. This stunning tower represents our mastery of modern design principles while incorporating advanced engineering solutions and sustainable technologies.</p>
               <ul class="project-detail-list text-dark">
                 <li>
                   <span class="left">Client:</span>
@@ -786,7 +777,7 @@
                 </li>
                 <li>
                   <span class="left">Completion:</span>
-                  <span class="right">September 2024</span>
+                  <span class="right">November 2024</span>
                 </li>
                 <li>
                   <span class="left">Project Type:</span>
@@ -817,27 +808,27 @@
           </div>
         </div>
 
-        <!-- Project Modal Dialog 4 -->
-        <div id="project4" class="container zoom-anim-dialog mfp-hide">
+        <!-- Project Modal Dialog 3 -->
+        <div id="project3" class="container zoom-anim-dialog mfp-hide">
           <div class="row">
-            <div class="col-lg-8"><img alt="Project Genesis" class="project-detail-img" src="images/projects/ext4.jpg"></div>
+            <div class="col-lg-8"><img alt="Milko Co-Working" class="project-detail-img" src="images/projects/ext3.jpg"></div>
             <div class="col-lg-4">
-              <h3 class="project-detail-title">Redesign Interior For Villa</h3>
+              <h3 class="project-detail-title">Milko Co-Working Building</h3>
               <p class="project-detail-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
                 nibh euismod tincidunt ut. magna aliquam erat volutpat enim ad minim veniam. Duis autem vel eum iriure
                 dolor in hendrerit in.</p>
               <ul class="project-detail-list text-dark">
                 <li>
                   <span class="left">Client:</span>
-                  <span class="right">Genesis Foundation</span>
+                  <span class="right">Milko Inc.</span>
                 </li>
                 <li>
                   <span class="left">Completion:</span>
-                  <span class="right">December 2024</span>
+                  <span class="right">September 2024</span>
                 </li>
                 <li>
                   <span class="left">Project Type:</span>
-                  <span class="right">Mixed-Use Development</span>
+                  <span class="right">Commercial Space</span>
                 </li>
                 <li>
                   <span class="left">Architects:</span>
@@ -845,7 +836,7 @@
                 </li>
                 <li>
                   <span class="left">Investment:</span>
-                  <span class="right">$8,750,000</span>
+                  <span class="right">$3,200,000</span>
                 </li>
               </ul>
               <div class="project-detail-meta">
@@ -858,7 +849,53 @@
                   <a href="https://www.linkedin.com/in/dextera-dei-b9a9b427b/recent-activity/all/"
                     class="icon ion-social-linkedin"></a>
                   <a href="mailto:business@dexteradei.com" class="icon ion-email"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <!-- Project Modal Dialog 4 -->
+        <div id="project4" class="container zoom-anim-dialog mfp-hide">
+          <div class="row">
+            <div class="col-lg-8"><img alt="Villa Interior Redesign" class="project-detail-img" src="images/projects/ext4.jpg"></div>
+            <div class="col-lg-4">
+              <h3 class="project-detail-title">Villa Interior Redesign</h3>
+              <p class="project-detail-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+                nibh euismod tincidunt ut. magna aliquam erat volutpat enim ad minim veniam. Duis autem vel eum iriure
+                dolor in hendrerit in.</p>
+              <ul class="project-detail-list text-dark">
+                <li>
+                  <span class="left">Client:</span>
+                  <span class="right">Private Villa Owner</span>
+                </li>
+                <li>
+                  <span class="left">Completion:</span>
+                  <span class="right">December 2024</span>
+                </li>
+                <li>
+                  <span class="left">Project Type:</span>
+                  <span class="right">Interior Design</span>
+                </li>
+                <li>
+                  <span class="left">Architects:</span>
+                  <span class="right">Dextera Dei Team</span>
+                </li>
+                <li>
+                  <span class="left">Investment:</span>
+                  <span class="right">$850,000</span>
+                </li>
+              </ul>
+              <div class="project-detail-meta">
+                <span class="left text-dark hidden-xs pull-sm-left">Share:</span>
+                <div class="social-list pull-sm-right">
+                  <a href="https://twitter.com/dexteradei_?s=11&t=_nSeUtxVF0S56gtu-QBxlw"
+                    class="icon ion-social-twitter"></a>
+                  <a href="https://www.facebook.com/profile.php?id=100093706063512"
+                    class="icon ion-social-facebook"></a>
+                  <a href="https://www.linkedin.com/in/dextera-dei-b9a9b427b/recent-activity/all/"
+                    class="icon ion-social-linkedin"></a>
+                  <a href="mailto:business@dexteradei.com" class="icon ion-email"></a>
                 </div>
               </div>
             </div>
@@ -868,32 +905,32 @@
         <!-- Project Modal Dialog 5 -->
         <div id="project5" class="container zoom-anim-dialog mfp-hide">
           <div class="row">
-            <div class="col-lg-8"><img alt="" class="project-detail-img" src="images/projects/ext5.jpg"></div>
+            <div class="col-lg-8"><img alt="Wooden Horizontal Villa" class="project-detail-img" src="images/projects/ext5.jpg"></div>
             <div class="col-lg-4">
-              <h3 class="project-detail-title">Wooden Hozirontal Villa</h3>
+              <h3 class="project-detail-title">Wooden Horizontal Villa</h3>
               <p class="project-detail-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
                 nibh euismod tincidunt ut. magna aliquam erat volutpat enim ad minim veniam. Duis autem vel eum iriure
                 dolor in hendrerit in.</p>
               <ul class="project-detail-list text-dark">
                 <li>
-                  <span class="left">Clients:</span>
-                  <span class="right">Ethan Hunt, John Doe</span>
+                  <span class="left">Client:</span>
+                  <span class="right">Eco-Friendly Developer</span>
                 </li>
                 <li>
                   <span class="left">Completion:</span>
-                  <span class="right">February 5th, 2019</span>
+                  <span class="right">February 2024</span>
                 </li>
                 <li>
                   <span class="left">Project Type:</span>
-                  <span class="right">Villa, Residence</span>
+                  <span class="right">Eco-Friendly Residence</span>
                 </li>
                 <li>
                   <span class="left">Architects:</span>
-                  <span class="right">Logan Cee, Paul</span>
+                  <span class="right">Dextera Dei Team</span>
                 </li>
                 <li>
-                  <span class="left">Budget:</span>
-                  <span class="right">$1 200 000</span>
+                  <span class="left">Investment:</span>
+                  <span class="right">$2,100,000</span>
                 </li>
               </ul>
               <div class="project-detail-meta">
@@ -915,7 +952,7 @@
         <!-- Project Modal Dialog 6 -->
         <div id="project6" class="container zoom-anim-dialog mfp-hide">
           <div class="row">
-            <div class="col-lg-8"><img alt="" class="project-detail-img" src="images/projects/ext6.jpg"></div>
+            <div class="col-lg-8"><img alt="Small House Near Wroclaw" class="project-detail-img" src="images/projects/ext6.jpg"></div>
             <div class="col-lg-4">
               <h3 class="project-detail-title">Small House Near Wroclaw</h3>
               <p class="project-detail-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
@@ -923,24 +960,24 @@
                 dolor in hendrerit in.</p>
               <ul class="project-detail-list text-dark">
                 <li>
-                  <span class="left">Clients:</span>
-                  <span class="right">Ethan Hunt, John Doe</span>
+                  <span class="left">Client:</span>
+                  <span class="right">Private Owner</span>
                 </li>
                 <li>
                   <span class="left">Completion:</span>
-                  <span class="right"> February 5th, 2019 </span>
+                  <span class="right">January 2024</span>
                 </li>
                 <li>
                   <span class="left">Project Type:</span>
-                  <span class="right">Villa, Residence</span>
+                  <span class="right">Compact Residence</span>
                 </li>
                 <li>
                   <span class="left">Architects:</span>
-                  <span class="right">Logan Cee, Paul</span>
+                  <span class="right">Dextera Dei Team</span>
                 </li>
                 <li>
-                  <span class="left">Budget:</span>
-                  <span class="right">$1 200 000</span>
+                  <span class="left">Investment:</span>
+                  <span class="right">$650,000</span>
                 </li>
               </ul>
               <div class="project-detail-meta">
@@ -958,92 +995,21 @@
             </div>
           </div>
         </div>
+      </section>
 
-        <!-- Project Modal Dialog 7 -->
-        <!-- <div id="project7" class="container zoom-anim-dialog mfp-hide">
+      <!-- Transition Section -->
+      <section class="transition-section">
+        <div class="container">
           <div class="row">
-            <div class="col-lg-8"><img alt="" class="project-detail-img" src="images/projects/ext1.jpg"></div>
-            <div class="col-lg-4">
-              <h3 class="project-detail-title">The Luxury Residence In Forest</h3>
-              <p class="project-detail-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut. magna aliquam erat volutpat enim ad minim veniam. Duis autem vel eum iriure dolor in hendrerit in.</p>
-              <ul class="project-detail-list text-dark">
-                <li>
-                  <span class="left">Clients:</span>
-                  <span class="right">Ethan Hunt, John Doe</span>
-                </li>
-                <li>
-                  <span class="left">Completion:</span>
-                  <span class="right">February 5th, 2019</span>
-                </li>
-                <li>
-                  <span class="left">Project Type:</span>
-                  <span class="right">Villa, Residence</span>
-                </li>
-                <li>
-                  <span class="left">Architects:</span>
-                  <span class="right">Logan Cee, Paul</span>
-                </li>
-                <li>
-                  <span class="left">Budget:</span>
-                  <span class="right">$1 200 000</span>
-                </li>
-              </ul>
-              <div class="project-detail-meta">
-                <span class="left text-dark hidden-xs pull-sm-left">Share:</span>
-                <div class="social-list pull-sm-right">
-                  <a href="" class="icon ion-social-twitter"></a>
-                  <a href="" class="icon ion-social-facebook"></a>
-                  <a href="" class="icon ion-social-googleplus"></a>
-                  <a href="" class="icon ion-social-linkedin"></a>
-                  <a href="" class="icon ion-social-dribbble-outline"></a>
-                </div>
+            <div class="col-12 text-center">
+              <div class="transition-content">
+                <h3>Ready to Start Your Next Project?</h3>
+                <p>Let's work together to bring your architectural vision to life</p>
+                <a href="#contacts" class="btn-cta">Get In Touch</a>
               </div>
             </div>
           </div>
-        </div> -->
-
-        <!-- Project Modal Dialog 8 -->
-        <!-- <div id="project8" class="container zoom-anim-dialog mfp-hide">
-          <div class="row">
-            <div class="col-lg-8"><img alt="" class="project-detail-img" src="https://i.postimg.cc/dQydcm2M/mu.png"></div>
-            <div class="col-lg-4">
-              <h3 class="project-detail-title">Cubic Inter Mesuem In Rome</h3>
-              <p class="project-detail-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut. magna aliquam erat volutpat enim ad minim veniam. Duis autem vel eum iriure dolor in hendrerit in.</p>
-              <ul class="project-detail-list text-dark">
-                <li>
-                  <span class="left">Clients:</span>
-                  <span class="right">Ethan Hunt, John Doe</span>
-                </li>
-                <li>
-                  <span class="left">Completion:</span>
-                  <span class="right">February 5th, 2019</span>
-                </li>
-                <li>
-                  <span class="left">Project Type:</span>
-                  <span class="right">Villa, Residence</span>
-                </li>
-                <li>
-                  <span class="left">Architects:</span>
-                  <span class="right">Logan Cee, Paul</span>
-                </li>
-                <li>
-                  <span class="left">Budget:</span>
-                  <span class="right">$1 200 000</span>
-                </li>
-              </ul>
-              <div class="project-detail-meta">
-                <span class="left text-dark hidden-xs pull-sm-left">Share:</span>
-                <div class="social-list pull-sm-right">
-                  <a href="" class="icon ion-social-twitter"></a>
-                  <a href="" class="icon ion-social-facebook"></a>
-                  <a href="" class="icon ion-social-googleplus"></a>
-                  <a href="" class="icon ion-social-linkedin"></a>
-                  <a href="" class="icon ion-social-dribbble-outline"></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> -->
+        </div>
       </section>
 
       <!-- Section Clients -->
@@ -1269,9 +1235,9 @@
       </section> -->
 
       <!-- Section Contacts -->
-      <section id="contacts">
+      <section id="contacts" class="section-contacts">
         <!-- <div id="map" class="map"></div> -->
-        <div class="bg-dots">
+        <div class="contacts-content">
           <section>
             <div class="container">
               <div class="row">
@@ -1380,7 +1346,7 @@
           </ul>
         </div>
         <div class="flex-item">
-          <div class="inline-block pull-sm-right">© Dextera Dei Ltd 2023. All Rights Resevered</div>
+          <div class="inline-block pull-sm-right">© Dextera Dei Ltd 2024. All Rights Reserved</div>
         </div>
       </div>
     </footer>

@@ -107,15 +107,28 @@ website:   	http://www.themepunch.com
 .rev_slider_wrapper{
 	position:relative;
 	z-index: 0;
+	height: 100vh;
+	min-height: 600px;
 }
 
 
 .rev_slider{
 	position:relative;
 	overflow:visible;
+	height: 100vh;
+	min-height: 600px;
 }
 
-.tp-overflow-hidden { overflow:hidden;}
+.fullscreenbanner {
+	height: 100vh !important;
+	min-height: 600px !important;
+}
+
+.tp-overflow-hidden { 
+	overflow:hidden;
+	height: 100vh;
+	min-height: 600px;
+}
 
 .tp-simpleresponsive img,
 .rev_slider img{

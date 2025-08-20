@@ -289,6 +289,56 @@
 
 
 	/*-------------------------------------------------------------------------------
+	  Project Filtering
+	-------------------------------------------------------------------------------*/
+
+	// Project filtering functionality
+	$(document).ready(function() {
+		$('.filter-item').on('click', function() {
+			var filter = $(this).data('filter');
+			
+			// Update active filter
+			$('.filter-item').removeClass('active');
+			$(this).addClass('active');
+			
+			// Filter projects
+			if (filter === '*') {
+				$('.project-item').fadeIn(400);
+			} else {
+				$('.project-item').fadeOut(200);
+				$('.project-item' + filter).fadeIn(400);
+			}
+		});
+
+		// Project gallery functionality
+		$('.project-gallery-thumbs .thumb').on('click', function() {
+			var newSrc = $(this).attr('src');
+			var gallery = $(this).closest('.project-gallery');
+			var mainImg = gallery.find('.project-detail-img');
+			
+			// Update active thumbnail
+			$(this).siblings().removeClass('active');
+			$(this).addClass('active');
+			
+			// Update main image with fade effect
+			mainImg.fadeOut(200, function() {
+				$(this).attr('src', newSrc).fadeIn(200);
+			});
+		});
+
+		// Scroll progress indicator
+		$(window).scroll(function() {
+			var scrollTop = $(window).scrollTop();
+			var docHeight = $(document).height();
+			var winHeight = $(window).height();
+			var scrollPercent = (scrollTop) / (docHeight - winHeight);
+			var scrollPercentRounded = Math.round(scrollPercent * 100);
+			$('.scroll-progress').css('width', scrollPercentRounded + '%');
+		});
+	});
+
+
+	/*-------------------------------------------------------------------------------
 	  Projects Modal
 	-------------------------------------------------------------------------------*/
 
