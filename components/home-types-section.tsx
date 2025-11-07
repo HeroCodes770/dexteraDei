@@ -88,11 +88,11 @@ export function HomeTypesSection() {
   }
 
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-neutral-50">
+    <section className="py-12 md:py-16 lg:py-24 bg-gradient-to-b from-white to-neutral-50">
       <div className="container-custom">
         {/* Section Header */}
         <Reveal>
-          <div className="text-center mb-16">
+          <div className="text-center mb-8 md:mb-12 lg:mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-4">
               Our Home Types
             </h2>
@@ -104,7 +104,7 @@ export function HomeTypesSection() {
         </Reveal>
 
         {/* Home Type Cards */}
-        <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8 lg:gap-12">
           {homeTypes.map((home, index) => (
             <Reveal key={home.id} delay={index * 0.2}>
               <motion.div

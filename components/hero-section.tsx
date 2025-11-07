@@ -44,8 +44,8 @@ const heroProjects = [
     description: "Pushing boundaries of modern architecture"
   },
   {
-    src: "/projects/Casa/casa3.jpg",
-    alt: "Casa Bloom - Interior excellence",
+    src: "/projects/interior/int1.jpeg",
+    alt: "Interior excellence",
     title: "INTERIOR EXCELLENCE",
     subtitle: "Interior Design",
     category: "DESIGN",

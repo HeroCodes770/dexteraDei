@@ -22,11 +22,11 @@ export function ClientProjectsSection() {
     setTimeout(() => setSelectedProject(null), 300)
   }
   return (
-    <section className="py-24 bg-gradient-to-b from-white to-neutral-50">
+    <section className="py-12 md:py-16 lg:py-24 bg-gradient-to-b from-white to-neutral-50">
       <div className="container-custom">
         {/* Section Header */}
         <Reveal>
-          <div className="text-center mb-16">
+          <div className="text-center mb-8 md:mb-12 lg:mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-4">
               Client Projects
             </h2>
@@ -38,7 +38,7 @@ export function ClientProjectsSection() {
         </Reveal>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {clientProjectsData.map((project, index) => (
             <Reveal key={project.id} delay={index * 0.15}>
               <motion.div
@@ -63,6 +63,10 @@ export function ClientProjectsSection() {
                     <span className={`px-3 py-1 rounded-full text-sm font-medium ${
                       project.status === "Completed" 
                         ? "bg-green-500 text-white" 
+                        : project.status === "On-site"
+                        ? "bg-blue-500 text-white"
+                        : project.status === "In-Design"
+                        ? "bg-purple-500 text-white"
                         : project.status === "In Progress"
                         ? "bg-blue-500 text-white"
                         : "bg-amber-500 text-white"
@@ -81,7 +85,7 @@ export function ClientProjectsSection() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
+                <div className="p-4 md:p-6">
                   <h3 className="text-2xl font-bold text-neutral-900 mb-3 group-hover:text-neutral-700 transition-colors">
                     {project.name}
                   </h3>

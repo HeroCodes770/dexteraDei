@@ -6,7 +6,7 @@ export interface Project {
   description: string
   category: string
   image: string
-  status: "Completed" | "In Progress" | "Upcoming"
+  status: "Completed" | "In Progress" | "Upcoming" | "On-site" | "In-Design"
   type: "Design & Build" | "Design"
   specifications?: {
     location?: string
@@ -26,19 +26,20 @@ export const clientProjectsData: Project[] = [
     name: "Casa Crispina",
     description: "Luxury residential design that embodies elegance and contemporary living. A masterpiece of modern architecture combining sophisticated design with functional living spaces.",
     category: "Residential",
-    image: "/projects/Casa/casa1.jpg",
+    image: "/projects/casa-crispina/1.png",
     status: "Completed",
     type: "Design & Build",
     images: [
-      "/projects/Casa/casa1.jpg",
-      "/projects/Casa/casa3.jpg",
-      "/projects/Casa/casa4.jpg",
-      "/projects/Casa/case2.jpg",
+      "/projects/casa-crispina/1.png",
+      "/projects/casa-crispina/2.png",
+      "/projects/casa-crispina/3.png",
+      "/projects/casa-crispina/4.png",
+      "/projects/casa-crispina/5.png",
+      "/projects/casa-crispina/6.png",
     ],
     specifications: {
       location: "Accra, Ghana",
-      area: "450 sqm",
-      completionDate: "2023",
+      area: "~1,300 sqm",
       type: "Design & Build"
     }
   },
@@ -59,18 +60,17 @@ export const clientProjectsData: Project[] = [
     ],
     specifications: {
       location: "Accra, Ghana",
-      area: "1,200 sqm",
-      completionDate: "2024",
+      area: "~163 sqm",
       type: "Design & Build"
     }
   },
   {
     id: "grandiose",
     name: "Project Grandiose",
-    description: "A landmark architectural project showcasing innovative design and premium construction. This commercial development sets new standards for excellence with its sophisticated design and attention to detail.",
-    category: "Commercial",
+    description: "A landmark architectural project showcasing innovative design and premium construction. This residential development sets new standards for excellence with its sophisticated design and attention to detail.",
+    category: "Residential",
     image: "/projects/grandiose/001.jpg",
-    status: "In Progress",
+    status: "On-site",
     type: "Design & Build",
     images: [
       "/projects/grandiose/001.jpg",
@@ -81,8 +81,7 @@ export const clientProjectsData: Project[] = [
     ],
     specifications: {
       location: "Accra, Ghana",
-      area: "2,500 sqm",
-      completionDate: "2025",
+      area: "~1,300 sqm",
       type: "Design & Build"
     }
   },
@@ -90,17 +89,16 @@ export const clientProjectsData: Project[] = [
     id: "proton",
     name: "Project Proton",
     description: "A cutting-edge development project combining technology and sustainable design. Modern architecture meets innovation in this forward-thinking development.",
-    category: "Commercial",
+    category: "Residential",
     image: "/projects/proton/hero.jpg",
-    status: "In Progress",
+    status: "In-Design",
     type: "Design & Build",
     images: [
       "/projects/proton/hero.jpg",
     ],
     specifications: {
       location: "Accra, Ghana",
-      area: "1,800 sqm",
-      completionDate: "2025",
+      area: "~325 sqm",
       type: "Design & Build"
     }
   },
@@ -108,7 +106,7 @@ export const clientProjectsData: Project[] = [
     id: "quadra",
     name: "Project Quadra",
     description: "An innovative architectural project showcasing modern design principles. A visionary development that balances aesthetics with functionality.",
-    category: "Commercial",
+    category: "Residential",
     image: "/projects/quadra/hero.jpg",
     status: "Upcoming",
     type: "Design & Build",
@@ -117,8 +115,7 @@ export const clientProjectsData: Project[] = [
     ],
     specifications: {
       location: "Accra, Ghana",
-      area: "TBD",
-      completionDate: "2026",
+      area: "~4,047 sqm",
       type: "Design & Build"
     }
   }

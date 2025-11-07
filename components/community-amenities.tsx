@@ -51,11 +51,11 @@ const amenities = [
 
 export function CommunityAmenities() {
   return (
-    <section className="py-24 bg-gradient-to-b from-neutral-50 to-white">
+    <section className="py-12 md:py-16 lg:py-24 bg-gradient-to-b from-neutral-50 to-white">
       <div className="container-custom">
         {/* Section Header */}
         <Reveal>
-          <div className="text-center mb-16">
+          <div className="text-center mb-8 md:mb-12 lg:mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-neutral-900 mb-4">
               Community Amenities
             </h2>
@@ -67,7 +67,7 @@ export function CommunityAmenities() {
         </Reveal>
 
         {/* Amenities Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
           {amenities.map((amenity, index) => (
             <Reveal key={amenity.title} delay={index * 0.1}>
               <motion.div

@@ -39,9 +39,9 @@ export function Footer() {
 
   return (
     <footer className="bg-white/[0.02] border-t border-white/[0.02]">
-      <div className="container-custom py-16 lg:py-20">
+      <div className="container-custom py-12 md:py-16 lg:py-20">
         {/* Main Footer Content */}
-        <div className="md:flex justify-between items-start gap-12 lg:gap-16 mb-12">
+        <div className="md:flex justify-between items-start gap-8 md:gap-12 lg:gap-16 mb-8 md:mb-12">
           <div className="mb-6 md:mb-0 ">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -91,13 +91,13 @@ export function Footer() {
                   <h4 className="font-semibold text-neutral-900 mb-4">
                     {category}
                   </h4>
-                  <ul className="space-y-3 flex flex-wrap">
+                  <ul className="space-y-3">
                     {links.map((link) => (
                       <li key={link.name}>
                         {link.href.startsWith("/") ? (
                           <Link
                             href={link.href}
-                            className="text-neutral-600 hover:text-neutral-900 transition-colors duration-200 group flex items-center"
+                            className="text-neutral-600 hover:text-neutral-900 transition-colors duration-200 group inline-flex items-center"
                           >
                             {link.name}
                             <ArrowUpRight
@@ -108,7 +108,7 @@ export function Footer() {
                         ) : (
                           <a
                             href={link.href}
-                            className="text-neutral-600 hover:text-neutral-900 transition-colors duration-200 group flex items-center"
+                            className="text-neutral-600 hover:text-neutral-900 transition-colors duration-200 group inline-flex items-center"
                           >
                             {link.name}
                             <ArrowUpRight

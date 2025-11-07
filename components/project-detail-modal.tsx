@@ -104,16 +104,20 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
 
                   {/* Project Title Overlay - Moved to bottom */}
                   <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 bg-gradient-to-t from-black/70 via-black/50 to-transparent">
-                    <div className="flex items-center gap-3 mb-3">
-                      <span className={`px-3 py-1 rounded-full text-sm font-medium ${
-                        project.status === "Completed" 
-                          ? "bg-green-500 text-white" 
-                          : project.status === "In Progress"
-                          ? "bg-blue-500 text-white"
-                          : "bg-amber-500 text-white"
-                      }`}>
-                        {project.status}
-                      </span>
+                        <div className="flex items-center gap-3 mb-3">
+                          <span className={`px-3 py-1 rounded-full text-sm font-medium ${
+                            project.status === "Completed"
+                              ? "bg-green-500 text-white"
+                              : project.status === "On-site"
+                              ? "bg-blue-500 text-white"
+                              : project.status === "In-Design"
+                              ? "bg-purple-500 text-white"
+                              : project.status === "In Progress"
+                              ? "bg-blue-500 text-white"
+                              : "bg-amber-500 text-white"
+                          }`}>
+                            {project.status}
+                          </span>
                       <span className="px-3 py-1 rounded-full text-sm font-medium bg-white/20 text-white backdrop-blur-sm">
                         {project.type}
                       </span>
@@ -157,7 +161,7 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
 
               {/* Content - Compact */}
               <div className="overflow-y-auto bg-white border-t border-neutral-200">
-                <div className="p-6 md:p-8">
+                <div className="p-4 md:p-6 lg:p-8">
                   {/* Description */}
                   <div className="mb-6">
                     <h3 className="text-xl font-bold text-neutral-900 mb-3">About This Project</h3>
@@ -167,7 +171,7 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
                   </div>
 
                   {/* Specifications */}
-                  <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+                  <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                     <div className="bg-neutral-50 rounded-lg p-4">
                       <div className="flex items-center gap-3">
                         <div className="p-2 bg-neutral-900 rounded-lg flex-shrink-0">
@@ -191,20 +195,6 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
                           <p className="text-xs text-neutral-500 font-medium">Area</p>
                           <p className="text-base font-semibold text-neutral-900">
                             {project.specifications?.area || "TBD"}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="bg-neutral-50 rounded-lg p-4">
-                      <div className="flex items-center gap-3">
-                        <div className="p-2 bg-neutral-900 rounded-lg flex-shrink-0">
-                          <Calendar className="w-4 h-4 text-white" />
-                        </div>
-                        <div className="min-w-0">
-                          <p className="text-xs text-neutral-500 font-medium">Completion</p>
-                          <p className="text-base font-semibold text-neutral-900">
-                            {project.specifications?.completionDate || "TBD"}
                           </p>
                         </div>
                       </div>
