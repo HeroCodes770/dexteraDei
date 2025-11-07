@@ -31,8 +31,8 @@ export function Header() {
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
     >
-      <div className="px-8">
-        <div className="flex items-center justify-between gap-4 py-4">
+      <div className="px-4 md:px-8">
+        <div className="flex items-center justify-between gap-4 py-3 md:py-4">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}

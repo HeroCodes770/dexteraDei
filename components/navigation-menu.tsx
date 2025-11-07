@@ -76,28 +76,29 @@ export function NavigationMenu({ isOpen, onClose }: NavigationMenuProps) {
 
           {/* Navigation Menu */}
           <motion.div
-            className="fixed w-full bg-black/95 h-screen "
+            className="fixed w-full h-screen md:w-auto md:h-auto"
             initial={{ scale: 0.9, opacity: 0, y: 20, x: 0 }}
             animate={{ scale: 1, opacity: 1, y: 0, x: 0 }}
             exit={{ scale: 0.9, opacity: 0, y: 20, x: 0 }}
             transition={{ duration: 0.3, ease: [0.21, 0.47, 0.32, 0.98] }}
             style={{ position: 'fixed' }}
           >
-            <BlurPanel className="bg-white/95 shadow-xl backdrop-blur-md w-full border max-w-2xl md:max-w-sm max-h-[80vh] overflow-hidden  md:mt-20 md:mr-4">
-              <div className="p-8">
+            <BlurPanel className="bg-white/95 shadow-xl backdrop-blur-md w-full h-full md:h-auto border-0 md:border md:max-w-sm md:max-h-[80vh] overflow-y-auto md:overflow-hidden md:mt-20 md:mr-4">
+              <div className="p-6 md:p-8">
                 {/* Header */}
-                <div className="flex items-center justify-between mb-8">
-                  <h2 className="text-2xl font-semibold text-neutral-900">Navigation</h2>
+                <div className="flex items-center justify-between mb-6 md:mb-8">
+                  <h2 className="text-xl md:text-2xl font-semibold text-neutral-900">Navigation</h2>
                   <button
                     className="p-2 hover:bg-neutral-100 rounded-full transition-colors"
                     onClick={onClose}
+                    aria-label="Close menu"
                   >
-                    <X size={24} />
+                    <X size={20} className="md:w-6 md:h-6" />
                   </button>
                 </div>
 
                 {/* Navigation Links */}
-                <nav className="space-y-2">
+                <nav className="space-y-1 md:space-y-2">
                   {navigationItems.map((item, index) => (
                     <motion.div
                       key={item.name}
@@ -108,19 +109,19 @@ export function NavigationMenu({ isOpen, onClose }: NavigationMenuProps) {
                       {item.isHash ? (
                         <button
                           onClick={() => handleLinkClick(item.href, true)}
-                          className="w-full text-left p-4 rounded-lg hover:bg-neutral-50 transition-all duration-200 group"
+                          className="w-full text-left p-3 md:p-4 rounded-lg hover:bg-neutral-50 transition-all duration-200 group"
                         >
                           <div className="flex items-center justify-between">
-                            <div>
-                              <h3 className="text-lg font-medium text-neutral-900 group-hover:text-neutral-700 transition-colors">
+                            <div className="flex-1">
+                              <h3 className="text-base md:text-lg font-medium text-neutral-900 group-hover:text-neutral-700 transition-colors">
                                 {item.name}
                               </h3>
-                              <p className="text-sm text-neutral-500 mt-1">
+                              <p className="text-xs md:text-sm text-neutral-500 mt-0.5 md:mt-1">
                                 {item.description}
                               </p>
                             </div>
                             <motion.div
-                              className="text-neutral-400 group-hover:text-neutral-600 transition-colors"
+                              className="text-neutral-400 group-hover:text-neutral-600 transition-colors ml-2"
                               initial={{ x: 0 }}
                               whileHover={{ x: 4 }}
                               transition={{ duration: 0.2 }}
@@ -133,19 +134,19 @@ export function NavigationMenu({ isOpen, onClose }: NavigationMenuProps) {
                         <Link
                           href={item.href}
                           onClick={() => handleLinkClick(item.href, false)}
-                          className="w-full text-left p-4 rounded-lg hover:bg-neutral-50 transition-all duration-200 group block"
+                          className="w-full text-left p-3 md:p-4 rounded-lg hover:bg-neutral-50 transition-all duration-200 group block"
                         >
                           <div className="flex items-center justify-between">
-                            <div>
-                              <h3 className="text-lg font-medium text-neutral-900 group-hover:text-neutral-700 transition-colors">
+                            <div className="flex-1">
+                              <h3 className="text-base md:text-lg font-medium text-neutral-900 group-hover:text-neutral-700 transition-colors">
                                 {item.name}
                               </h3>
-                              <p className="text-sm text-neutral-500 mt-1">
+                              <p className="text-xs md:text-sm text-neutral-500 mt-0.5 md:mt-1">
                                 {item.description}
                               </p>
                             </div>
                             <motion.div
-                              className="text-neutral-400 group-hover:text-neutral-600 transition-colors"
+                              className="text-neutral-400 group-hover:text-neutral-600 transition-colors ml-2"
                               initial={{ x: 0 }}
                               whileHover={{ x: 4 }}
                               transition={{ duration: 0.2 }}

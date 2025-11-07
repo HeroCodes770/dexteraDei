@@ -242,7 +242,7 @@ export function HeroSection() {
         className="relative z-10 h-full flex items-center w-full"
         style={{ y: contentY, opacity: contentOpacity }}
       >
-        <div className="px-8 text-white w-full">
+        <div className="px-4 md:px-8 text-white w-full">
           {/* Animated text content for each project */}
           {heroProjects.map((project, index) => (
             <motion.div
@@ -268,7 +268,7 @@ export function HeroSection() {
                     transition={{ duration: 0.8, delay: 0.6 }}
                   >
                     <motion.h1
-                      className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-light leading-none tracking-tight mb-6"
+                      className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-light leading-none tracking-tight mb-4 md:mb-6 px-4"
                       initial={{ opacity: 0, y: 40 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{
@@ -280,7 +280,7 @@ export function HeroSection() {
                     </motion.h1>
 
                     <motion.p
-                      className="text-lg md:text-xl text-white/80 max-w-2xl mx-auto mb-8"
+                      className="text-sm md:text-lg lg:text-xl text-white/80 max-w-2xl mx-auto mb-6 md:mb-8 px-4"
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.8, delay: 1.2 }}

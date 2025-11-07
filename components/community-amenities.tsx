@@ -75,22 +75,22 @@ export function CommunityAmenities() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ y: -8, scale: 1.02 }}
-                className="group relative bg-white rounded-xl p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-neutral-100"
+                className="group relative bg-white rounded-xl p-4 md:p-6 shadow-md hover:shadow-xl transition-all duration-300 border border-neutral-100"
               >
                 {/* Icon */}
                 <motion.div
-                  className={`mb-4 p-4 rounded-xl ${amenity.bgColor} w-fit`}
+                  className={`mb-3 md:mb-4 p-3 md:p-4 rounded-xl ${amenity.bgColor} w-fit`}
                   whileHover={{ rotate: 5, scale: 1.1 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <amenity.icon className={`w-8 h-8 ${amenity.iconColor}`} />
+                  <amenity.icon className={`w-6 h-6 md:w-8 md:h-8 ${amenity.iconColor}`} />
                 </motion.div>
 
                 {/* Content */}
-                <h3 className="text-xl font-bold text-neutral-900 mb-2">
+                <h3 className="text-lg md:text-xl font-bold text-neutral-900 mb-2">
                   {amenity.title}
                 </h3>
-                <p className="text-neutral-600 leading-relaxed">
+                <p className="text-sm md:text-base text-neutral-600 leading-relaxed">
                   {amenity.description}
                 </p>
 

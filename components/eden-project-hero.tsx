@@ -65,17 +65,17 @@ export function EdenProjectHero() {
         ))}
       </div>
 
-      {/* Navigation Arrows */}
+      {/* Navigation Arrows - Hidden on mobile */}
       <button
         onClick={prevImage}
-        className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 p-3 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full transition-all duration-200 hover:scale-110 border border-white/20"
+        className="hidden md:flex absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 p-3 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full transition-all duration-200 hover:scale-110 border border-white/20"
         aria-label="Previous image"
       >
         <ChevronLeft className="w-6 h-6 text-white" />
       </button>
       <button
         onClick={nextImage}
-        className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 p-3 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full transition-all duration-200 hover:scale-110 border border-white/20"
+        className="hidden md:flex absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 p-3 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full transition-all duration-200 hover:scale-110 border border-white/20"
         aria-label="Next image"
       >
         <ChevronRight className="w-6 h-6 text-white" />
@@ -97,9 +97,9 @@ export function EdenProjectHero() {
         ))}
       </div>
 
-      <div className="container-custom relative z-10 py-24">
+      <div className="container-custom relative z-10 py-12 md:py-24 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          {/* Main Title with Logo */}
+          {/* Main Title */}
           <Reveal>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -107,21 +107,9 @@ export function EdenProjectHero() {
               transition={{ duration: 0.8 }}
               className="mb-6"
             >
-              <div className="flex flex-col items-center gap-4 mb-4">
-                <div className="relative">
-                  <Image
-                    src="/Dex Lite.png"
-                    alt="Dextera Dei Logo"
-                    width={180}
-                    height={54}
-                    className="h-14 w-auto drop-shadow-2xl"
-                    priority
-                  />
-                </div>
-                <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white drop-shadow-2xl">
-                  Eden Project
-                </h1>
-              </div>
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white drop-shadow-2xl text-center">
+                Eden Project
+              </h1>
             </motion.div>
           </Reveal>
 
@@ -131,7 +119,7 @@ export function EdenProjectHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed drop-shadow-lg"
+              className="text-base md:text-xl lg:text-2xl text-white/90 mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed drop-shadow-lg px-4"
             >
             Our mini-community featuring a blend of 2 bedroom and 3 bedroom homes 
             with smart feature capabilities and solar power. Built with sustainability 

@@ -38,7 +38,7 @@ export function ClientProjectsSection() {
         </Reveal>
 
         {/* Projects Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 px-4 md:px-0">
           {clientProjectsData.map((project, index) => (
             <Reveal key={project.id} delay={index * 0.15}>
               <motion.div
@@ -46,7 +46,7 @@ export function ClientProjectsSection() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.15 }}
                 whileHover={{ y: -8 }}
-                className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-neutral-100"
+                className="group bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-neutral-100"
               >
                 {/* Image */}
                 <div className="relative h-64 overflow-hidden bg-gradient-to-br from-neutral-100 to-neutral-200">
@@ -86,10 +86,10 @@ export function ClientProjectsSection() {
 
                 {/* Content */}
                 <div className="p-4 md:p-6">
-                  <h3 className="text-2xl font-bold text-neutral-900 mb-3 group-hover:text-neutral-700 transition-colors">
+                  <h3 className="text-xl md:text-2xl font-bold text-neutral-900 mb-2 md:mb-3 group-hover:text-neutral-700 transition-colors">
                     {project.name}
                   </h3>
-                  <p className="text-neutral-600 mb-4 line-clamp-2 leading-relaxed">
+                  <p className="text-sm md:text-base text-neutral-600 mb-3 md:mb-4 line-clamp-2 leading-relaxed">
                     {project.description}
                   </p>
 
