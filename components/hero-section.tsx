@@ -16,13 +16,14 @@ import { BlurPanel } from "./blur-panel";
 // Project images for the hero section
 const heroProjects = [
   {
-    src: "/projects/Casa/casa1.jpg",
-    alt: "Casa Bloom - Luxury residential project",
-    title: "CASA BLOOM",
+    src: "/Royal Seat.mp4",
+    alt: "Project Royal Seat - Luxury residential project",
+    title: "PROJECT ROYAL SEAT",
     subtitle: "Luxury Residential",
     category: "RESIDENTIAL",
     category2: "MODERN DESIGN",
-    description: "Where elegance meets contemporary living"
+    description: "Where elegance meets contemporary living",
+    isVideo: true
   },
   {
     src: "/projects/Villa/villa1.jpg",
@@ -161,14 +162,26 @@ export function HeroSection() {
               ease: "easeInOut",
             }}
           >
-            <Image
-              src={project.src}
-              alt={project.alt}
-              fill
-              className="object-cover"
-              priority={index === 0}
-              sizes="100vw"
-            />
+            {project.isVideo ? (
+              <video
+                src={project.src.replace(' ', '%20')}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-full object-cover"
+                style={{ position: 'absolute', inset: 0 }}
+              />
+            ) : (
+              <Image
+                src={project.src}
+                alt={project.alt}
+                fill
+                className="object-cover"
+                priority={index === 0}
+                sizes="100vw"
+              />
+            )}
             <div className="absolute inset-0 bg-black/50" />
 
             {/* Modern overlay with subtle gradient */}

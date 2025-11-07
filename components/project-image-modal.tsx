@@ -16,6 +16,19 @@ interface ProjectMeta {
 }
 
 function getProjectMetaFromSrc(src: string): ProjectMeta {
+  if (src.includes("Royal Seat") || src.includes("RoyalSeat")) {
+    return {
+      title: "Project Royal Seat",
+      description:
+        "Project Royal Seat represents the harmony of modern luxury and natural elegance. A calm sanctuary crafted for refined living.",
+      client: "Private Luxury Residence",
+      completion: "September 2024",
+      projectType: "Luxury Residential",
+      architects: "Dextera Dei Team",
+      investment: "$3,200,000",
+    }
+  }
+
   if (src.includes("Casa")) {
     return {
       title: "Casa Bloom",
