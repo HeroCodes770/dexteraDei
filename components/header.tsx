@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { NavigationMenu } from "./navigation-menu";
@@ -36,15 +37,17 @@ export function Header() {
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-white text-xl font-medium flex gap-2 items-center "
+            className="flex items-center"
           >
-            <div className="">
-              <Image src="/dexteralogo.png" alt="logo" className={cn(isScrolled ?  "" : "invert")} width={30} height={30} />
-            </div>
-            <div className={cn(isScrolled ?  "text-black" : "text-white")} >
-              <p >Dextera Dei</p>
-              <p className=" text-xs -mt-1">Limited</p>
-            </div>
+            <Link href="/">
+              <Image 
+                src="/Dex Lite.png" 
+                alt="Dextera Dei Logo" 
+                width={90} 
+                height={27} 
+                className="h-7 w-auto"
+              />
+            </Link>
           </motion.div>
 
           <motion.button

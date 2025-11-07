@@ -2,6 +2,8 @@
 
 import { useState } from "react"
 import { motion } from "framer-motion"
+import Link from "next/link"
+import { ArrowRight } from "lucide-react"
 import { ProductCard } from "./product-card"
 import { QuickLookModal } from "./quick-look-modal"
 import { Reveal } from "./reveal"
@@ -130,6 +132,22 @@ export function FeaturedProducts() {
             </motion.div>
           ))}
         </motion.div>
+
+        {/* View All Projects CTA */}
+        <Reveal delay={0.4}>
+          <div className="mt-16 text-center">
+            <Link
+              href="/projects"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-neutral-900 text-white rounded-full hover:bg-neutral-800 transition-all duration-300 group font-medium"
+            >
+              View All Projects
+              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+            </Link>
+            <p className="text-neutral-600 mt-4 text-sm">
+              Explore our complete portfolio of architectural excellence
+            </p>
+          </div>
+        </Reveal>
       </div>
 
       <QuickLookModal product={selectedProduct} isOpen={isModalOpen} onClose={closeModal} />

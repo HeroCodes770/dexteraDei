@@ -696,25 +696,7 @@ a.brand:focus{
 .brand img{
   display: inline-block;
   vertical-align: top;
-  margin-right: 0.65rem;
   height: 2.356rem;
-}
-
-.brand-info{
-  display: inline-block;
-}
-
-.brand-name{
-  font-weight: 600;
-  font-size: 1.714rem;
-  line-height: 1;
-}
-
-.brand-text{
-  color: #868686;
-  font-size: 0.857rem;
-  font-weight: 300;
-  margin-top: -0.3rem; 
 }
 
 .navbar-toggle{

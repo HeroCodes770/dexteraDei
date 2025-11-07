@@ -55,6 +55,54 @@ const collections = [
     image: "/projects/Vertika/vert4.jpg",
     count: "6 pieces",
   },
+  {
+    id: "interior-1",
+    name: "INTERIOR DESIGN",
+    image: "/projects/interior/int1.jpeg",
+    count: "3 pieces",
+  },
+  {
+    id: "interior-2",
+    name: "INTERIOR SPACES",
+    image: "/projects/interior/int2.jpeg",
+    count: "4 pieces",
+  },
+  {
+    id: "interior-3",
+    name: "INTERIOR CRAFT",
+    image: "/projects/interior/int3.jpeg",
+    count: "5 pieces",
+  },
+  {
+    id: "interior-4",
+    name: "INTERIOR ELEGANCE",
+    image: "/projects/interior/int4.jpeg",
+    count: "4 pieces",
+  },
+  {
+    id: "interior-5",
+    name: "INTERIOR STYLE",
+    image: "/projects/interior/int5.jpeg",
+    count: "5 pieces",
+  },
+  {
+    id: "interior-6",
+    name: "INTERIOR LUXURY",
+    image: "/projects/interior/int6.jpeg",
+    count: "6 pieces",
+  },
+  {
+    id: "interior-7",
+    name: "INTERIOR REFINED",
+    image: "/projects/interior/int7.jpeg",
+    count: "4 pieces",
+  },
+  {
+    id: "interior-8",
+    name: "INTERIOR MODERN",
+    image: "/projects/interior/int8.jpeg",
+    count: "5 pieces",
+  },
 ]
 
 export function CollectionStrip() {

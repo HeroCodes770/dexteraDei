@@ -1,15 +1,17 @@
 "use client";
 import { motion } from "framer-motion";
 import { Instagram, Twitter, Facebook, ArrowUpRight, Linkedin, Mail } from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const footerLinks = {
     Navigation: [
-      { name: "Home", href: "#home" },
+      { name: "Home", href: "/" },
       { name: "Collections", href: "#collections" },
-      { name: "Projects", href: "#materials" },
+      { name: "Projects", href: "/projects" },
       { name: "About Us", href: "#about" },
       { name: "Contact", href: "#newsletter" },
     ],
@@ -47,9 +49,13 @@ export function Footer() {
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <h3 className="text-2xl font-bold text-neutral-900 mb-4">
-                Dextera Dei
-              </h3>
+              <Image 
+                src="/Dex Dark.png" 
+                alt="Dextera Dei Logo" 
+                width={90} 
+                height={27} 
+                className="h-7 w-auto mb-4"
+              />
               <p className="text-neutral-600 mb-6 leading-relaxed">
                 Archtectural Artistry and Craftmanship for the discerning
                 client.
@@ -88,16 +94,29 @@ export function Footer() {
                   <ul className="space-y-3 flex flex-wrap">
                     {links.map((link) => (
                       <li key={link.name}>
-                        <a
-                          href={link.href}
-                          className="text-neutral-600 hover:text-neutral-900 transition-colors duration-200 group flex items-center"
-                        >
-                          {link.name}
-                          <ArrowUpRight
-                            size={14}
-                            className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
-                          />
-                        </a>
+                        {link.href.startsWith("/") ? (
+                          <Link
+                            href={link.href}
+                            className="text-neutral-600 hover:text-neutral-900 transition-colors duration-200 group flex items-center"
+                          >
+                            {link.name}
+                            <ArrowUpRight
+                              size={14}
+                              className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                            />
+                          </Link>
+                        ) : (
+                          <a
+                            href={link.href}
+                            className="text-neutral-600 hover:text-neutral-900 transition-colors duration-200 group flex items-center"
+                          >
+                            {link.name}
+                            <ArrowUpRight
+                              size={14}
+                              className="ml-1 opacity-0 group-hover:opacity-100 transition-opacity duration-200"
+                            />
+                          </a>
+                        )}
                       </li>
                     ))}
                   </ul>
@@ -115,7 +134,7 @@ export function Footer() {
           transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
         >
-          © Dextera Dei Ltd 2024. All Rights Reserved
+          © Dextera Dei Ltd 2022. All Rights Reserved
         </motion.div>
       </div>
     </footer>
