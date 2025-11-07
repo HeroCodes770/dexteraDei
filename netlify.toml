@@ -6,4 +6,5 @@
 
 [build.environment]
   NODE_VERSION = "18"
+  NEXT_PRIVATE_STANDALONE = "true"
 
