@@ -25,7 +25,7 @@ function initialize() {
     //change address details here
     var contentString = '<div class="map-info">' 
     + '<div class="map-title">' 
-    + '<div class="brand" href="#"><img alt="" src="images/brand.png"><div class="brand-info"><div class="brand-name">bauhaus</div><div class="brand-text">architecture</div></div></div></div>' 
+    + '<div class="brand" href="#"><img alt="Dextera Dei Logo" src="Dex Lite.png" style="height: 27px;"></div></div>' 
     + '<div class="map-address-row">'
     + '  <span class="text"><strong class="text-dark">Melbourne, VIC 3000, Australia,</strong><br>'
     + '  269 King Str, 05th Floor</span>'

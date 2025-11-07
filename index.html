@@ -24,7 +24,236 @@
   <link href="css/style.css" rel="stylesheet" media="screen">
 
   <!--Styles for the what we do section-->
+  <style>
+    /* BUILDING WITH TRUST SECTION */
+    .trust-section {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        position: relative;
+        overflow: hidden;
+        background: #000;
+        z-index: 1;
+    }
 
+    .trust-content-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        height: 100vh;
+        width: 100%;
+    }
+
+    .trust-image-side {
+        position: relative;
+        background: linear-gradient(45deg, rgba(206, 224, 2, 0.1), rgba(0, 0, 0, 0.3)), 
+                    url('https://i.postimg.cc/0QzhWzT0/pexels-thisisengineering-3862365-min.png') center/cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .trust-image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, rgba(206, 224, 2, 0.2), rgba(0, 0, 0, 0.6));
+        animation: overlayPulse 8s ease-in-out infinite;
+    }
+
+    @keyframes overlayPulse {
+        0%, 100% { opacity: 0.8; }
+        50% { opacity: 0.6; }
+    }
+
+    .trust-content-side {
+        background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+        padding: 80px 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+    }
+
+    .trust-content-side::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: 
+            radial-gradient(circle at 20% 30%, rgba(206, 224, 2, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(255, 215, 0, 0.05) 0%, transparent 50%);
+        animation: contentGlow 6s ease-in-out infinite;
+    }
+
+    @keyframes contentGlow {
+        0%, 100% { opacity: 0.3; }
+        50% { opacity: 0.7; }
+    }
+
+    .trust-main-title {
+        font-size: 3.5rem;
+        font-weight: 900;
+        color: #fff;
+        line-height: 1.1;
+        margin-bottom: 1.5rem;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        position: relative;
+        z-index: 2;
+        opacity: 0;
+        transform: translateY(50px);
+        animation: slideInUp 1s ease-out 0.3s forwards;
+    }
+
+    .trust-main-title .highlight {
+        color: #cee002;
+        text-shadow: 0 0 20px rgba(206, 224, 2, 0.5);
+    }
+
+    .trust-subtitle {
+        font-size: 1.3rem;
+        color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 3rem;
+        line-height: 1.6;
+        position: relative;
+        z-index: 2;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: slideInUp 1s ease-out 0.6s forwards;
+    }
+
+    .trust-features {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    .trust-feature {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 2.5rem;
+        opacity: 0;
+        transform: translateX(-30px);
+        animation: slideInLeft 0.8s ease-out forwards;
+    }
+
+    .trust-feature:nth-child(1) { animation-delay: 0.9s; }
+    .trust-feature:nth-child(2) { animation-delay: 1.2s; }
+    .trust-feature:nth-child(3) { animation-delay: 1.5s; }
+
+    .trust-feature-icon {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #cee002, #a8b800);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 20px;
+        flex-shrink: 0;
+        box-shadow: 0 10px 25px rgba(206, 224, 2, 0.3);
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .trust-feature:hover .trust-feature-icon {
+        transform: scale(1.1) rotate(5deg);
+        box-shadow: 0 15px 35px rgba(206, 224, 2, 0.5);
+    }
+
+    .trust-feature-icon i {
+        font-size: 1.5rem;
+        color: #000;
+        font-weight: 700;
+    }
+
+    .trust-feature-content h4 {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #fff;
+        margin-bottom: 0.5rem;
+        transition: color 0.3s ease;
+    }
+
+    .trust-feature:hover .trust-feature-content h4 {
+        color: #cee002;
+    }
+
+    .trust-feature-content p {
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 1.6;
+        margin: 0;
+    }
+
+    .trust-closing-statement {
+        margin-top: 3rem;
+        padding: 25px 30px;
+        background: rgba(206, 224, 2, 0.1);
+        border-radius: 15px;
+        border-left: 4px solid #cee002;
+        position: relative;
+        z-index: 2;
+        opacity: 0;
+        transform: translateY(30px);
+        animation: slideInUp 1s ease-out 1.8s forwards;
+    }
+
+    .trust-closing-statement p {
+        font-size: 1.1rem;
+        color: #fff;
+        margin: 0;
+        font-style: italic;
+        text-align: center;
+    }
+
+    @keyframes slideInUp {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes slideInLeft {
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .trust-content-wrapper {
+            grid-template-columns: 1fr;
+            grid-template-rows: 40vh 60vh;
+        }
+        
+        .trust-content-side {
+            padding: 40px 30px;
+        }
+        
+        .trust-main-title {
+            font-size: 2.5rem;
+        }
+        
+        .trust-subtitle {
+            font-size: 1.1rem;
+        }
+        
+        .trust-feature {
+            margin-bottom: 2rem;
+        }
+        
+        .trust-feature-icon {
+            width: 50px;
+            height: 50px;
+        }
+    }
+  </style>
 
 </head>
 
@@ -89,11 +318,7 @@
 
       <!-- Brand -->
       <a class="brand" href="#">
-        <img alt="" src="images/brand.png">
-        <div class="brand-info">
-          <div class="brand-name">Dextera Dei</div>
-          <div class="brand-text">Limited</div>
-        </div>
+        <img alt="Dextera Dei Logo" src="Dex Lite.png" style="height: 27px;">
       </a>
 
       <!-- Phone -->
@@ -549,6 +774,64 @@
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Building with Trust Section -->
+      <section class="trust-section">
+        <div class="trust-content-wrapper">
+          <!-- Image Side -->
+          <div class="trust-image-side">
+            <div class="trust-image-overlay"></div>
+          </div>
+          
+          <!-- Content Side -->
+          <div class="trust-content-side">
+            <h1 class="trust-main-title">
+              Building with <span class="highlight">Trust</span><br>
+              Delivering with <span class="highlight">Transparency</span>
+            </h1>
+            
+            <p class="trust-subtitle">
+              Enjoy peace of mind while we bring your vision to life. With us, you get:
+            </p>
+            
+            <ul class="trust-features">
+              <li class="trust-feature">
+                <div class="trust-feature-icon">
+                  <i class="icon ion-clipboard"></i>
+                </div>
+                <div class="trust-feature-content">
+                  <h4>Full Access</h4>
+                  <p>From start to finish, you're always in the loop. Complete transparency in every phase of your project.</p>
+                </div>
+              </li>
+              
+              <li class="trust-feature">
+                <div class="trust-feature-icon">
+                  <i class="icon ion-stats-bars"></i>
+                </div>
+                <div class="trust-feature-content">
+                  <h4>Weekly Progress Updates</h4>
+                  <p>Know exactly where your project stands with detailed weekly reports and milestone tracking.</p>
+                </div>
+              </li>
+              
+              <li class="trust-feature">
+                <div class="trust-feature-icon">
+                  <i class="icon ion-videocamera"></i>
+                </div>
+                <div class="trust-feature-content">
+                  <h4>Live Site Cameras</h4>
+                  <p>Constant visual access to your site, anytime. Watch your vision come to life in real-time.</p>
+                </div>
+              </li>
+            </ul>
+            
+            <div class="trust-closing-statement">
+              <p>We're committed to making your building process smooth, transparent, and enjoyable—every step of the way.</p>
             </div>
           </div>
         </div>
@@ -1323,11 +1606,7 @@
       <div class="footer-flex">
         <div class="flex-item">
           <a class="brand pull-left" href="#">
-            <img alt="" src="images/brand.png">
-            <div class="brand-info">
-              <div class="brand-name">Dextera Dei</div>
-              <div class="brand-text">Ltd</div>
-            </div>
+            <img alt="Dextera Dei Logo" src="Dex Lite.png" style="height: 27px;">
           </a>
         </div>
         <div class="flex-item">
@@ -1346,7 +1625,7 @@
           </ul>
         </div>
         <div class="flex-item">
-          <div class="inline-block pull-sm-right">© Dextera Dei Ltd 2024. All Rights Reserved</div>
+          <div class="inline-block pull-sm-right">© Dextera Dei Ltd 2022. All Rights Reserved</div>
         </div>
       </div>
     </footer>
