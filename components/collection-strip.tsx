@@ -8,40 +8,22 @@ import { ProjectImageModal } from "./project-image-modal"
 
 const collections = [
   {
-    id: "grandiose-1",
+    id: "grandiose",
     name: "Project Grandiose",
     description: "A sophisticated residential development showcasing modern architectural excellence.",
     image: "/projects/grandiose/001.jpg",
   },
   {
-    id: "grandiose-2",
-    name: "Project Grandiose",
-    description: "Elegant design meets functional living in this contemporary masterpiece.",
-    image: "/projects/grandiose/002.jpg",
-  },
-  {
-    id: "casa-crispina-1",
+    id: "casa-crispina",
     name: "Casa Crispina",
     description: "A refined residential project blending luxury with timeless elegance.",
     image: "/projects/casa-crispina/1.png",
   },
   {
-    id: "casa-crispina-2",
-    name: "Casa Crispina",
-    description: "Thoughtful design creating spaces of comfort and sophistication.",
-    image: "/projects/casa-crispina/2.png",
-  },
-  {
-    id: "vertika-1",
+    id: "vertika",
     name: "Project Vertika",
     description: "Vertical living reimagined with contemporary design principles.",
     image: "/projects/vertika/vert1.jpg",
-  },
-  {
-    id: "vertika-2",
-    name: "Project Vertika",
-    description: "Modern architecture that reaches new heights in residential design.",
-    image: "/projects/vertika/vert2.jpg",
   },
   {
     id: "interior-kitchen",
@@ -148,8 +130,7 @@ export function CollectionStrip() {
                 </motion.div>
               </div>
               <div className="px-2">
-                <h3 className="text-lg font-semibold text-neutral-900 mb-1">{collection.name}</h3>
-                <p className="text-sm text-neutral-600 line-clamp-2">{collection.description}</p>
+                <h3 className="text-lg font-semibold text-neutral-900">{collection.name}</h3>
               </div>
             </motion.div>
           ))}

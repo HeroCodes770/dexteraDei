@@ -105,7 +105,7 @@ export function ProjectImageModal({ src, title, description, isOpen, onClose }: 
         >
           <div className="absolute inset-0 bg-black/50 backdrop-blur-sm" onClick={onClose} />
           <motion.div
-            className="relative w-full max-w-6xl max-h-[92vh] overflow-hidden"
+            className="relative w-full max-w-7xl max-h-[95vh] overflow-hidden"
             initial={{ scale: 0.96, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.96, opacity: 0 }}
@@ -117,9 +117,9 @@ export function ProjectImageModal({ src, title, description, isOpen, onClose }: 
                   <X size={22} />
                 </button>
 
-                <div className="relative w-full max-w-7xl mx-auto">
-                  <div className="relative w-full aspect-[16/10] md:aspect-[16/9] rounded-xl overflow-hidden shadow-lg mb-4">
-                    <Image src={src || "/placeholder.svg"} alt={displayTitle} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 90vw" />
+                <div className="relative w-full mx-auto">
+                  <div className="relative w-full aspect-[16/9] md:aspect-[21/9] rounded-xl overflow-hidden shadow-lg mb-4">
+                    <Image src={src || "/placeholder.svg"} alt={displayTitle} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 95vw" />
                   </div>
                   <div className="text-center">
                     <h2 className="text-2xl md:text-3xl font-semibold text-neutral-900 mb-2">{displayTitle}</h2>
