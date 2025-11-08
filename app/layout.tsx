@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   description: "Crafting Timeless Spaces, Shaping the Future.",
   generator: "virtuoso",
   icons: {
-    icon: "/Dex Dark.png",
-    apple: "/Dex Dark.png",
+    icon: "/favicon.png",
+    apple: "/favicon.png",
   },
 
   openGraph: {
