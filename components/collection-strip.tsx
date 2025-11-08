@@ -122,12 +122,12 @@ export function CollectionStrip() {
   const maxDrag = Math.max(0, totalWidth - containerWidth + 48) // add padding
 
   return (
-    <section ref={containerRef} id="collections" className="py-20 lg:py-32 overflow-hidden">
-      <div className="mb-12">
+    <section ref={containerRef} id="collections" className="py-12 md:py-20 lg:py-32 overflow-hidden">
+      <div className="mb-8 md:mb-12">
         <Reveal>
-          <div className="container-custom text-center">
-            <h2 className="text-neutral-900 mb-4 text-6xl font-normal">Signature Collections</h2>
-            <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
+          <div className="container-custom text-center px-4 md:px-0">
+            <h2 className="text-neutral-900 mb-3 md:mb-4 text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-normal">Signature Collections</h2>
+            <p className="text-sm md:text-base lg:text-lg text-neutral-600 max-w-2xl mx-auto">
               Discover curated ensembles where craftsmanship meets considered design—each collection telling its own refined story.
             </p>
           </div>
@@ -186,8 +186,8 @@ export function CollectionStrip() {
         </motion.div>
       </div>
 
-      <div className="text-center mt-8">
-        <p className="text-sm text-neutral-500">← Drag to explore collections →</p>
+      <div className="text-center mt-6 md:mt-8 px-4">
+        <p className="text-xs md:text-sm text-neutral-500">← Drag to explore collections →</p>
       </div>
 
       {selectedSrc && (

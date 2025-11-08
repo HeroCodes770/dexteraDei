@@ -25,7 +25,7 @@ export function TrustSection() {
   return (
     <section className="min-h-screen flex items-center relative overflow-hidden bg-black">
       <div className="w-full">
-        <div className="grid grid-cols-1 lg:grid-cols-2 h-screen">
+        <div className="grid grid-cols-1 lg:grid-cols-2 min-h-screen">
           {/* Image Side */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -62,13 +62,13 @@ export function TrustSection() {
           </motion.div>
 
           {/* Content Side */}
-          <div className="flex items-center justify-center p-8 lg:p-16">
-            <div className="max-w-lg">
+          <div className="flex items-center justify-center p-4 md:p-8 lg:p-16">
+            <div className="max-w-lg w-full">
               <motion.h1
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8 }}
-                className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-6 leading-tight"
+                className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-white mb-4 md:mb-6 leading-tight px-4"
               >
                 Building with{" "}
                 <motion.span
@@ -107,7 +107,7 @@ export function TrustSection() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: 0.4 }}
-                className="text-lg text-gray-300 mb-12"
+                className="text-sm md:text-base lg:text-lg text-gray-300 mb-8 md:mb-12 px-4"
               >
                 Enjoy peace of mind while we bring your vision to life. With us, you get:
               </motion.p>
@@ -134,7 +134,7 @@ export function TrustSection() {
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ duration: 0.4, delay: 0.8 + index * 0.2 }}
-                        className="text-xl font-semibold text-white mb-2 group-hover:text-[#cee002] transition-colors duration-300"
+                        className="text-base md:text-lg lg:text-xl font-semibold text-white mb-2 group-hover:text-[#cee002] transition-colors duration-300"
                       >
                         {feature.title}
                       </motion.h4>
@@ -142,7 +142,7 @@ export function TrustSection() {
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
                         transition={{ duration: 0.4, delay: 1 + index * 0.2 }}
-                        className="text-gray-400 leading-relaxed"
+                        className="text-sm md:text-base text-gray-400 leading-relaxed"
                       >
                         {feature.description}
                       </motion.p>
@@ -162,7 +162,7 @@ export function TrustSection() {
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ duration: 0.6, delay: 1.6 }}
-                  className="text-gray-300 italic text-center"
+                  className="text-sm md:text-base text-gray-300 italic text-center"
                 >
                   We're committed to making your building process smooth, transparent, and enjoyable—every step of the way.
                 </motion.p>
