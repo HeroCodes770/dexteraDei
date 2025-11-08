@@ -56,7 +56,7 @@ export function Footer() {
                 height={27} 
                 className="h-7 w-auto mb-4"
               />
-              <p className="text-neutral-600 mb-6 leading-relaxed">
+              <p className="text-sm md:text-base text-neutral-600 mb-4 md:mb-6 leading-relaxed">
                 Archtectural Artistry and Craftmanship for the discerning
                 client.
               </p>
@@ -88,10 +88,10 @@ export function Footer() {
                   transition={{ duration: 0.6, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
-                  <h4 className="font-semibold text-neutral-900 mb-4">
+                  <h4 className="text-sm md:text-base font-semibold text-neutral-900 mb-3 md:mb-4">
                     {category}
                   </h4>
-                  <ul className="space-y-3">
+                  <ul className="space-y-2 md:space-y-3">
                     {links.map((link) => (
                       <li key={link.name}>
                         {link.href.startsWith("/") ? (
