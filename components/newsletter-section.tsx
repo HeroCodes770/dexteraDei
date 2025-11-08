@@ -29,19 +29,21 @@ export function NewsletterSection() {
   }
 
   return (
-    <section id="newsletter" className="py-20 lg:py-32">
+    <section id="newsletter" className="py-12 md:py-20 lg:py-32">
       <div className="container-custom">
         <Reveal>
-          <div className="max-w-4xl mx-auto">
-            <BlurPanel className="p-8 lg:p-12 bg-white/40 backdrop-blur-md grain-texture">
+          <div className="max-w-4xl mx-auto px-4 md:px-0">
+            <BlurPanel className="p-6 md:p-8 lg:p-12 bg-white/40 backdrop-blur-md grain-texture">
               <div className="text-center mb-8">
-                <h2 className="text-3xl lg:text-4xl  font-light  text-neutral-900 mb-4">
-                  <AnimatedText text="Ready to Start Your  " delay={0.2} />
-                  <span className="font-bold">
-                    <AnimatedText text="Next Project" delay={0.5} />
+                <h2 className="text-2xl md:text-3xl lg:text-4xl font-light text-neutral-900 mb-4">
+                  <span className="whitespace-nowrap inline-block">
+                    <AnimatedText text="Ready to Start Your " delay={0.2} />
+                    <span className="font-bold">
+                      <AnimatedText text="Next Project" delay={0.5} />
+                    </span>
                   </span>
                 </h2>
-                <p className="text-lg text-neutral-600">
+                <p className="text-base md:text-lg text-neutral-600 px-4">
                 Let's work together to bring your architectural vision to life.
                 </p>
               </div>
