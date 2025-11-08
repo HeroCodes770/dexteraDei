@@ -108,16 +108,21 @@ export function ProjectImageModal({ src, isOpen, onClose }: ProjectImageModalPro
             transition={{ duration: 0.25, ease: [0.21, 0.47, 0.32, 0.98] }}
           >
             <BlurPanel className="bg-white/95 backdrop-blur-md">
-              <div className="relative p-6 lg:p-8">
+              <div className="relative p-4 md:p-6 lg:p-8">
                 <button className="absolute right-4 top-4 p-2 hover:bg-neutral-100 rounded-full transition-colors z-10" onClick={onClose}>
                   <X size={22} />
                 </button>
 
-                <div className="relative w-full max-w-5xl mx-auto">
-                  <div className="relative w-full aspect-[16/11] rounded-xl overflow-hidden shadow-sm mb-4">
-                    <Image src={src || "/placeholder.svg"} alt={meta.title} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 80vw" />
+                <div className="relative w-full max-w-7xl mx-auto">
+                  <div className="relative w-full aspect-[16/10] md:aspect-[16/9] rounded-xl overflow-hidden shadow-lg mb-4">
+                    <Image src={src || "/placeholder.svg"} alt={displayTitle} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 90vw" />
                   </div>
-                  <h2 className="text-2xl md:text-3xl font-semibold text-neutral-900 text-center">{meta.title}</h2>
+                  <div className="text-center">
+                    <h2 className="text-2xl md:text-3xl font-semibold text-neutral-900 mb-2">{displayTitle}</h2>
+                    {displayDescription && (
+                      <p className="text-sm md:text-base text-neutral-600 max-w-2xl mx-auto">{displayDescription}</p>
+                    )}
+                  </div>
                 </div>
               </div>
             </BlurPanel>

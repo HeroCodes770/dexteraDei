@@ -8,100 +8,76 @@ import { ProjectImageModal } from "./project-image-modal"
 
 const collections = [
   {
-    id: "modern-seating",
-    name: "MODERN SEATING",
-    image: "/projects/Casa/casa1.jpg",
-    count: "8 pieces",
+    id: "grandiose-1",
+    name: "Project Grandiose",
+    description: "A sophisticated residential development showcasing modern architectural excellence.",
+    image: "/projects/grandiose/001.jpg",
   },
   {
-    id: "modular-design",
-    name: "MODULAR DESIGN",
-    image: "/projects/Villa/villa1.jpg",
-    count: "6 pieces",
+    id: "grandiose-2",
+    name: "Project Grandiose",
+    description: "Elegant design meets functional living in this contemporary masterpiece.",
+    image: "/projects/grandiose/002.jpg",
   },
   {
-    id: "cloud-collection",
-    name: "CLOUD COLLECTION",
-    image: "/projects/Vertika/vert1.jpg",
-    count: "4 pieces",
+    id: "casa-crispina-1",
+    name: "Casa Crispina",
+    description: "A refined residential project blending luxury with timeless elegance.",
+    image: "/projects/casa-crispina/1.png",
   },
   {
-    id: "artistic-pieces",
-    name: "ARTISTIC PIECES",
-    image: "/projects/Casa/case2.jpg",
-    count: "5 pieces",
+    id: "casa-crispina-2",
+    name: "Casa Crispina",
+    description: "Thoughtful design creating spaces of comfort and sophistication.",
+    image: "/projects/casa-crispina/2.png",
   },
   {
-    id: "contemporary",
-    name: "CONTEMPORARY",
-    image: "/projects/Vertika/vert2.jpg",
-    count: "7 pieces",
+    id: "vertika-1",
+    name: "Project Vertika",
+    description: "Vertical living reimagined with contemporary design principles.",
+    image: "/projects/vertika/vert1.jpg",
   },
   {
-    id: "textural-craft",
-    name: "TEXTURAL CRAFT",
-    image: "/projects/Villa/villa2.jpg",
-    count: "3 pieces",
+    id: "vertika-2",
+    name: "Project Vertika",
+    description: "Modern architecture that reaches new heights in residential design.",
+    image: "/projects/vertika/vert2.jpg",
   },
   {
-    id: "maximalist-art",
-    name: "MAXIMALIST ART",
-    image: "/projects/Casa/casa3.jpg",
-    count: "4 pieces",
-  },
-  {
-    id: "scandinavian-comfort",
-    name: "SCANDINAVIAN COMFORT",
-    image: "/projects/Vertika/vert4.jpg",
-    count: "6 pieces",
-  },
-  {
-    id: "interior-1",
-    name: "INTERIOR DESIGN",
+    id: "interior-kitchen",
+    name: "Kitchen Elegance",
+    description: "A beautifully crafted kitchen space where functionality meets style.",
     image: "/projects/interior/int1.jpeg",
-    count: "3 pieces",
   },
   {
-    id: "interior-2",
-    name: "INTERIOR SPACES",
+    id: "interior-living",
+    name: "Living Spaces",
+    description: "Warm and inviting living areas designed for comfort and relaxation.",
     image: "/projects/interior/int2.jpeg",
-    count: "4 pieces",
   },
   {
-    id: "interior-3",
-    name: "INTERIOR CRAFT",
+    id: "interior-dining",
+    name: "Dining Excellence",
+    description: "Sophisticated dining spaces perfect for entertaining and family gatherings.",
     image: "/projects/interior/int3.jpeg",
-    count: "5 pieces",
   },
   {
-    id: "interior-4",
-    name: "INTERIOR ELEGANCE",
+    id: "interior-bedroom",
+    name: "Bedroom Sanctuary",
+    description: "Serene bedroom designs that create peaceful retreats for rest.",
     image: "/projects/interior/int4.jpeg",
-    count: "4 pieces",
   },
   {
-    id: "interior-5",
-    name: "INTERIOR STYLE",
+    id: "interior-bathroom",
+    name: "Bathroom Luxury",
+    description: "Luxurious bathroom designs combining elegance with modern amenities.",
     image: "/projects/interior/int5.jpeg",
-    count: "5 pieces",
   },
   {
-    id: "interior-6",
-    name: "INTERIOR LUXURY",
+    id: "interior-lounge",
+    name: "Lounge Comfort",
+    description: "Relaxed lounge areas designed for unwinding and socializing.",
     image: "/projects/interior/int6.jpeg",
-    count: "6 pieces",
-  },
-  {
-    id: "interior-7",
-    name: "INTERIOR REFINED",
-    image: "/projects/interior/int7.jpeg",
-    count: "4 pieces",
-  },
-  {
-    id: "interior-8",
-    name: "INTERIOR MODERN",
-    image: "/projects/interior/int8.jpeg",
-    count: "5 pieces",
   },
 ]
 
@@ -109,6 +85,7 @@ export function CollectionStrip() {
   const containerRef = useRef<HTMLDivElement>(null)
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [selectedSrc, setSelectedSrc] = useState<string | null>(null)
+  const [selectedCollection, setSelectedCollection] = useState<{ name: string; description: string } | null>(null)
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"],
@@ -150,6 +127,7 @@ export function CollectionStrip() {
               transition={{ duration: 0.3, ease: [0.21, 0.47, 0.32, 0.98] }}
               onClick={() => {
                 setSelectedSrc(collection.image)
+                setSelectedCollection({ name: collection.name, description: collection.description })
                 setIsModalOpen(true)
               }}
             >
@@ -168,18 +146,10 @@ export function CollectionStrip() {
                   />
                   <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-all duration-300" />
                 </motion.div>
-
-                {/* <div className="absolute inset-0 flex items-center justify-center">
-                  <motion.div
-                    className="text-center text-white"
-                    initial={{ opacity: 0.8 }}
-                    whileHover={{ opacity: 1, scale: 1.05 }}
-                    transition={{ duration: 0.3 }}
-                  >
-                    <h3 className="text-3xl font-bold tracking-wider mb-2">{collection.name}</h3>
-                    <p className="text-sm opacity-90">{collection.count}</p>
-                  </motion.div>
-                </div> */}
+              </div>
+              <div className="px-2">
+                <h3 className="text-lg font-semibold text-neutral-900 mb-1">{collection.name}</h3>
+                <p className="text-sm text-neutral-600 line-clamp-2">{collection.description}</p>
               </div>
             </motion.div>
           ))}
@@ -190,11 +160,17 @@ export function CollectionStrip() {
         <p className="text-xs md:text-sm text-neutral-500">← Drag to explore collections →</p>
       </div>
 
-      {selectedSrc && (
+      {selectedSrc && selectedCollection && (
         <ProjectImageModal
           src={selectedSrc}
+          title={selectedCollection.name}
+          description={selectedCollection.description}
           isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
+          onClose={() => {
+            setIsModalOpen(false)
+            setSelectedSrc(null)
+            setSelectedCollection(null)
+          }}
         />)
       }
     </section>
