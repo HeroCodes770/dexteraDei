@@ -20,7 +20,7 @@ const pillars = [
   {
     title: "Interior",
     description: "Designing interior spaces that reflect identity and purpose, where every element harmonizes to create exceptional living experiences.",
-    image: "/interior2.jpg",
+    image: "/Typical floor plan.jpg",
   }
 ]
 
