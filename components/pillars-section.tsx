@@ -10,7 +10,7 @@ const pillars = [
   {
     title: "Design",
     description: "Crafting visionary spaces that blend aesthetics with functionality, creating environments that inspire and endure.",
-    image: "/interior2.jpg",
+    image: "/design.jpg",
   },
   {
     title: "Building",
@@ -20,7 +20,7 @@ const pillars = [
   {
     title: "Interior",
     description: "Designing interior spaces that reflect identity and purpose, where every element harmonizes to create exceptional living experiences.",
-    image: "/Typical floor plan.jpg",
+    image: "/interior2.jpg",
   }
 ]
 
