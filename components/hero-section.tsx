@@ -247,7 +247,7 @@ export function HeroSection() {
           {heroProjects.map((project, index) => (
             <motion.div
               key={index}
-              className="absolute inset-0 flex items-center w-full px-8"
+              className="absolute inset-0 flex items-center w-full px-4 md:px-8"
               initial={{ opacity: 0, y: 30 }}
               animate={{
                 opacity: index === currentProjectIndex ? 1 : 0,
@@ -259,22 +259,23 @@ export function HeroSection() {
                 delay: index === currentProjectIndex ? 0.4 : 0,
               }}
             >
-              <div className="w-full max-w-6xl mx-auto">
+              <div className="w-full max-w-6xl mx-auto px-2 md:px-0">
                 <Reveal>
                   <motion.div
-                    className="text-center mb-8"
+                    className="text-center mb-6 md:mb-8"
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
                   >
                     <motion.h1
-                      className="text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-light leading-none tracking-tight mb-4 md:mb-6 px-4"
+                      className="text-xl md:text-3xl lg:text-4xl xl:text-5xl font-light leading-tight tracking-tight mb-4 md:mb-6"
                       initial={{ opacity: 0, y: 40 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{
                         duration: 1.0,
                         ease: [0.21, 0.47, 0.32, 0.98],
                       }}
+                      style={{ wordBreak: "keep-all", hyphens: "none", whiteSpace: "normal" }}
                     >
                       <AnimatedText text={project.title} delay={0.8} />
                     </motion.h1>
