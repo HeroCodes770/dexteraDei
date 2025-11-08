@@ -82,12 +82,16 @@ function getProjectMetaFromSrc(src: string): ProjectMeta {
 
 interface ProjectImageModalProps {
   src: string
+  title?: string
+  description?: string
   isOpen: boolean
   onClose: () => void
 }
 
-export function ProjectImageModal({ src, isOpen, onClose }: ProjectImageModalProps) {
+export function ProjectImageModal({ src, title, description, isOpen, onClose }: ProjectImageModalProps) {
   const meta = getProjectMetaFromSrc(src)
+  const displayTitle = title || meta.title
+  const displayDescription = description || meta.description
 
   return (
     <AnimatePresence>
