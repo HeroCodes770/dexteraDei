@@ -16,8 +16,8 @@ export const metadata: Metadata = {
   description: "Crafting Timeless Spaces, Shaping the Future.",
   generator: "virtuoso",
   icons: {
-    icon: "/Dex Lite.png",
-    apple: "/Dex Lite.png",
+    icon: "/Dex Dark.png",
+    apple: "/Dex Dark.png",
   },
 
   openGraph: {
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/Dex Lite.png",
+        url: "/Dex Dark.png",
         alt: "Dextera Dei - Architectural Artistry and Craftsmanship",
         width: 1200,
         height: 630,
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     description: "Crafting Timeless Spaces, Shaping the Future.",
     images: [
       {
-        url: "/Dex Lite.png",
+        url: "/Dex Dark.png",
         alt: "Dextera Dei - Architectural Artistry and Craftsmanship",
       },
     ],
