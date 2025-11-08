@@ -108,39 +108,16 @@ export function ProjectImageModal({ src, isOpen, onClose }: ProjectImageModalPro
             transition={{ duration: 0.25, ease: [0.21, 0.47, 0.32, 0.98] }}
           >
             <BlurPanel className="bg-white/95 backdrop-blur-md">
-              <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-8 p-6 lg:p-8">
-                <div className="relative">
-                  <div className="relative w-full aspect-[16/11] rounded-xl overflow-hidden shadow-sm">
-                    <Image src={src || "/placeholder.svg"} alt={meta.title} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 60vw" />
+              <div className="relative p-6 lg:p-8">
+                <button className="absolute right-4 top-4 p-2 hover:bg-neutral-100 rounded-full transition-colors z-10" onClick={onClose}>
+                  <X size={22} />
+                </button>
+
+                <div className="relative w-full max-w-5xl mx-auto">
+                  <div className="relative w-full aspect-[16/11] rounded-xl overflow-hidden shadow-sm mb-4">
+                    <Image src={src || "/placeholder.svg"} alt={meta.title} fill className="object-cover" sizes="(max-width: 1024px) 100vw, 80vw" />
                   </div>
-                </div>
-
-                <div className="relative">
-                  <button className="absolute right-0 -top-2 p-2 hover:bg-neutral-100 rounded-full transition-colors" onClick={onClose}>
-                    <X size={22} />
-                  </button>
-
-                  <h2 className="text-3xl font-semibold text-neutral-900 mb-3">{meta.title}</h2>
-                  <p className="text-neutral-600 leading-relaxed mb-6">{meta.description}</p>
-
-                  <div className="divide-y divide-neutral-200">
-                    <dl className="grid grid-cols-3 gap-y-4 py-4">
-                      <dt className="col-span-1 text-sm font-medium text-neutral-500">Client:</dt>
-                      <dd className="col-span-2 text-sm text-neutral-900">{meta.client}</dd>
-
-                      <dt className="col-span-1 text-sm font-medium text-neutral-500">Completion:</dt>
-                      <dd className="col-span-2 text-sm text-neutral-900">{meta.completion}</dd>
-
-                      <dt className="col-span-1 text-sm font-medium text-neutral-500">Project Type:</dt>
-                      <dd className="col-span-2 text-sm text-neutral-900">{meta.projectType}</dd>
-
-                      <dt className="col-span-1 text-sm font-medium text-neutral-500">Architects:</dt>
-                      <dd className="col-span-2 text-sm text-neutral-900">{meta.architects}</dd>
-
-                      <dt className="col-span-1 text-sm font-medium text-neutral-500">Investment:</dt>
-                      <dd className="col-span-2 text-sm text-neutral-900">{meta.investment}</dd>
-                    </dl>
-                  </div>
+                  <h2 className="text-2xl md:text-3xl font-semibold text-neutral-900 text-center">{meta.title}</h2>
                 </div>
               </div>
             </BlurPanel>
