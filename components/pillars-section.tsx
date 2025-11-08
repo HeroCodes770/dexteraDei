@@ -10,7 +10,7 @@ const pillars = [
   {
     title: "Design",
     description: "Crafting visionary spaces that blend aesthetics with functionality, creating environments that inspire and endure.",
-    image: "/design.jpg",
+    image: "/design-pic.jpg",
   },
   {
     title: "Building",
