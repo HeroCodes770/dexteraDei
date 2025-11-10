@@ -62,9 +62,7 @@ const homeTypes = [
       "3.5 Bathrooms (3 Ensuite + 1 Shared)",
     ],
     images: [
-      "/projects/eden/2bedroom/A.jpg", // Using 2BR images as placeholder until 3BR images are added
-      "/projects/eden/2bedroom/B.jpg",
-      "/projects/eden/2bedroom/C (1).jpg",
+      "/projects/eden/3bedroom/AA.png",
     ],
     headerGradient: "from-neutral-50 to-neutral-100",
     checkColor: "text-neutral-900",
