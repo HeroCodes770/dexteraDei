@@ -62,7 +62,7 @@ const heroProjects = [
     description: "Thoughtfully designed 2-bedroom homes with modern amenities"
   },
   {
-    src: "/projects/eden/3bedroom/entrance.jpeg",
+    src: "/projects/eden/3bedroom/better_internal_view.jpg",
     alt: "Tritone Homes - 3 bedroom homes",
     title: "EDEN VILLAGE",
     subtitle: "Tritone Homes",
