@@ -66,6 +66,7 @@ const homeTypes = [
       "/projects/eden/3bedroom/entrance.jpeg",
       "/projects/eden/3bedroom/inside_view.png",
       "/projects/eden/3bedroom/road.jpeg",
+      "/projects/eden/3bedroom/better_internal_view.jpg",
     ],
     headerGradient: "from-neutral-50 to-neutral-100",
     checkColor: "text-neutral-900",
