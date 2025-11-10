@@ -29,7 +29,7 @@ const heroProjects = [
     src: "/projects/Villa/villa1.jpg",
     alt: "Project Villa - Sophisticated villa design",
     title: "PROJECT VILLA",
-    subtitle: "Villa Design",
+    subtitle: "Villa Visualisation",
     category: "ARCHITECTURE",
     category2: "LUXURY",
     description: "Crafting spaces that inspire"

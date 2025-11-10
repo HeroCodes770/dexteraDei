@@ -140,7 +140,7 @@ export function EdenProjectHero() {
                 { icon: Home, label: "Smart Homes" },
                 { icon: Sun, label: "Solar Powered" },
                 { icon: Leaf, label: "Sustainable" },
-                { icon: Sparkles, label: "Modern Design" },
+                { icon: Sparkles, label: "Modern Visualisation" },
               ].map((feature, index) => (
                 <motion.div
                   key={feature.label}

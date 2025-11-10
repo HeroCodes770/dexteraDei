@@ -116,7 +116,7 @@ export function AboutSection() {
                     <div className="w-12 h-12 bg-neutral-100 rounded-lg flex items-center justify-center">
                       <div className="w-6 h-6 bg-[#cee002] rounded-full" />
                     </div>
-                    <h4 className="text-base md:text-lg font-medium text-neutral-900">Timeless Design</h4>
+                    <h4 className="text-base md:text-lg font-medium text-neutral-900">Timeless Visualisation</h4>
                     <p className="text-xs md:text-sm text-neutral-600">Creating spaces that transcend trends and remain relevant for generations.</p>
                   </div>
                   

@@ -8,7 +8,7 @@ import Link from "next/link"
 
 const pillars = [
   {
-    title: "Design",
+    title: "Visualisation",
     description: "Crafting visionary spaces that blend aesthetics with functionality, creating environments that inspire and endure.",
     image: "/design-pic.jpg",
   },
@@ -34,7 +34,7 @@ export function PillarsSection() {
               Our Pillars
             </h2>
             <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-              The foundation of our excellence: Design, Building, and Interior. 
+              The foundation of our excellence: Visualisation, Building, and Interior. 
               Three pillars that define our commitment to creating exceptional spaces.
             </p>
           </div>
