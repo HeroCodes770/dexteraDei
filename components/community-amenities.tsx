@@ -22,7 +22,7 @@ const amenities = [
   {
     icon: Users,
     title: "Inclusive Access for All Abilities",
-    description: "Designed to be accessible and welcoming to everyone",
+    description: "Thoughtfully designed to be accessible, comfortable, and welcoming for everyone.",
     bgColor: "bg-neutral-50",
     iconColor: "text-neutral-900",
   },
@@ -117,8 +117,7 @@ export function CommunityAmenities() {
                 Building Sustainable Communities
               </h3>
               <p className="text-neutral-300 text-lg leading-relaxed">
-                Eden Project represents our commitment to creating affordable, 
-                sustainable housing that doesn't compromise on quality or design.
+                Eden Project reflects our commitment to providing affordable, sustainable housing that never compromises on quality, comfort, or design. Each home is built to nurture both people and the planet, creating spaces where communities can truly thrive.
               </p>
             </div>
           </motion.div>

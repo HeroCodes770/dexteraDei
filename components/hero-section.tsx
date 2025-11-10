@@ -51,6 +51,24 @@ const heroProjects = [
     category: "DESIGN",
     category2: "CRAFTSMANSHIP",
     description: "Every detail tells a story"
+  },
+  {
+    src: "/projects/eden/2bedroom/A.jpg",
+    alt: "Covalent Homes - 2 bedroom homes",
+    title: "EDEN VILLAGE",
+    subtitle: "Covalent Homes",
+    category: "RESIDENTIAL",
+    category2: "2 BEDROOM",
+    description: "Thoughtfully designed 2-bedroom homes with modern amenities"
+  },
+  {
+    src: "/projects/eden/3bedroom/entrance.jpeg",
+    alt: "Tritone Homes - 3 bedroom homes",
+    title: "EDEN VILLAGE",
+    subtitle: "Tritone Homes",
+    category: "RESIDENTIAL",
+    category2: "3 BEDROOM",
+    description: "Spacious 3-bedroom homes with smart technologies"
   }
 ];
 

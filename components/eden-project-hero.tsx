@@ -121,10 +121,9 @@ export function EdenProjectHero() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-base md:text-xl lg:text-2xl text-white/90 mb-8 md:mb-12 max-w-3xl mx-auto leading-relaxed drop-shadow-lg px-4"
             >
-            Our mini-community featuring a blend of 2 bedroom and 3 bedroom homes 
-            with smart feature capabilities and solar power. Built with sustainability 
-            in mind, ensuring nature is utilized by focusing on allowing abundant light 
-            and natural ventilation.
+            Discover a thoughtfully designed neighborhood of 25 modern homes, offering a perfect blend of 2-bedroom and 3-bedroom layouts. Each residence features smart home capabilities and solar power integration, combining comfort, convenience, and energy efficiency.
+
+            Built with sustainability at heart, our homes are crafted to embrace nature—maximizing natural light and cross-ventilation to create bright, airy spaces that feel connected to the environment. Experience modern living that's both innovative and eco-friendly.
           </motion.p>
           </Reveal>
 

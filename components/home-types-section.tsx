@@ -62,9 +62,10 @@ const homeTypes = [
       "3.5 Bathrooms (3 Ensuite + 1 Shared)",
     ],
     images: [
-      "/projects/eden/3bedroom/AA.png",
-      "/projects/eden/3bedroom/2.jpg",
-      "/projects/eden/3bedroom/retouched.jpeg",
+      "/projects/eden/3bedroom/entrance_without_name.jpg",
+      "/projects/eden/3bedroom/entrance.jpeg",
+      "/projects/eden/3bedroom/inside_view.png",
+      "/projects/eden/3bedroom/road.jpeg",
     ],
     headerGradient: "from-neutral-50 to-neutral-100",
     checkColor: "text-neutral-900",
@@ -97,8 +98,8 @@ export function HomeTypesSection() {
               Our Home Types
             </h2>
             <p className="text-lg text-neutral-600 max-w-2xl mx-auto">
-              Choose from thoughtfully designed 2 and 3 bedroom homes, 
-              each equipped with modern amenities and sustainable features.
+              Choose from thoughtfully designed 2-bedroom and 3-bedroom homes, 
+              each featuring modern amenities, smart technologies, and sustainable design elements that enhance comfort and efficiency.
             </p>
           </div>
         </Reveal>
