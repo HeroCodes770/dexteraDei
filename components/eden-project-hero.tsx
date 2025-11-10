@@ -7,7 +7,7 @@ import { Leaf, Sun, Home, Sparkles, ChevronLeft, ChevronRight } from "lucide-rea
 import { Reveal } from "./reveal"
 
 const edenImages = [
-  "/projects/eden/2bedroom/A.jpg",
+  "/projects/eden/3bedroom/Triton.png",
   "/projects/eden/2bedroom/B.jpg",
   "/projects/eden/2bedroom/C (1).jpg",
   "/projects/eden/2bedroom/D (1).jpg",
