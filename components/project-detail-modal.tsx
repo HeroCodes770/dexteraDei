@@ -79,7 +79,7 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
 
                   {/* Navigation Arrows */}
-                  {images.length > 1 && (
+                  {images.length > 1 && !project.isVideo && (
                     <>
                       <button
                         onClick={prevImage}
@@ -99,7 +99,7 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
                   )}
 
                   {/* Image Counter */}
-                  {images.length > 1 && (
+                  {images.length > 1 && !project.isVideo && (
                     <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-white/90 rounded-full text-sm font-medium text-neutral-900">
                       {currentImageIndex + 1} / {images.length}
                     </div>
