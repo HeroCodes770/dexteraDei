@@ -4,6 +4,7 @@ import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { TrustSection } from "@/components/trust-section"
 import { PillarsSection } from "@/components/pillars-section"
+import { FeaturedProjectSection } from "@/components/featured-project-section"
 import { CollectionStrip } from "@/components/collection-strip"
 import { AboutSection } from "@/components/about-section"
 import { NewsletterSection } from "@/components/newsletter-section"
@@ -25,6 +26,7 @@ export default function HomePage() {
         <Header />
         <HeroSection />
         <PillarsSection />
+        <FeaturedProjectSection />
         <TrustSection />
         <CollectionStrip />
         <AboutSection />

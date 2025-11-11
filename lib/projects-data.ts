@@ -134,6 +134,7 @@ export const clientProjectsData: Project[] = [
     isVideo: true,
     specifications: {
       location: "Bibiani, Ghana",
+      area: "~1,950 sqm",
       type: "Design & Build"
     }
   }
