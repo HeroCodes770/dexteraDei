@@ -17,6 +17,7 @@ export interface Project {
   }
   images?: string[]
   details?: string
+  isVideo?: boolean
 }
 
 // Client Projects (separate from Eden Project)
@@ -116,6 +117,23 @@ export const clientProjectsData: Project[] = [
     specifications: {
       location: "Accra, Ghana",
       area: "~4,047 sqm",
+      type: "Design & Build"
+    }
+  },
+  {
+    id: "royal-seat",
+    name: "Royal Seat",
+    description: "A luxury residential project that embodies elegance and contemporary living. Where sophistication meets modern design in a stunning architectural masterpiece.",
+    category: "Residential",
+    image: "/Royal Seat.mp4",
+    status: "Completed",
+    type: "Design & Build",
+    images: [
+      "/Royal Seat.mp4",
+    ],
+    isVideo: true,
+    specifications: {
+      location: "Bibiani, Ghana",
       type: "Design & Build"
     }
   }

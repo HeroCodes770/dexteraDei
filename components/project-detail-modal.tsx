@@ -52,17 +52,29 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
             <div className="h-full w-full bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col">
               {/* Image Section - More Prominent */}
               <div className="relative flex-1 bg-neutral-50 overflow-hidden min-h-[60%]">
-                {/* Main Image */}
+                {/* Main Image/Video */}
                 <div className="relative h-full w-full flex items-center justify-center p-8 md:p-12">
                   <div className="relative w-full h-full max-w-7xl mx-auto">
-                    <Image
-                      src={currentImage}
-                      alt={project.name}
-                      fill
-                      className="object-contain"
-                      priority
-                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 95vw, 1400px"
-                    />
+                    {project.isVideo ? (
+                      <video
+                        src={currentImage.replace(' ', '%20')}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="w-full h-full object-contain rounded-lg"
+                        controls
+                      />
+                    ) : (
+                      <Image
+                        src={currentImage}
+                        alt={project.name}
+                        fill
+                        className="object-contain"
+                        priority
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 95vw, 1400px"
+                      />
+                    )}
                   </div>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
 
@@ -132,7 +144,7 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
                 </div>
 
                 {/* Thumbnail Gallery - More Prominent */}
-                {images.length > 1 && (
+                {images.length > 1 && !project.isVideo && (
                   <div className="absolute bottom-20 left-0 right-0 px-6 md:px-8 pb-4">
                     <div className="flex gap-3 overflow-x-auto scrollbar-hide max-w-6xl mx-auto">
                       {images.map((img, index) => (
