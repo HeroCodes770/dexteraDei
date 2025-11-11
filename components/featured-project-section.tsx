@@ -21,7 +21,7 @@ export function FeaturedProjectSection() {
   return (
     <section 
       ref={containerRef}
-      className="relative py-24 md:py-32 lg:py-40 overflow-hidden bg-gradient-to-b from-white via-neutral-50 to-white"
+      className="relative py-16 md:py-24 lg:py-32 xl:py-40 overflow-hidden bg-gradient-to-b from-white via-neutral-50 to-white"
     >
       {/* Background decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -30,7 +30,7 @@ export function FeaturedProjectSection() {
       </div>
 
       <div className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-16 items-center">
           {/* Image Side - Left */}
           <motion.div
             style={{ y: imageY, opacity }}
@@ -65,11 +65,11 @@ export function FeaturedProjectSection() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.3, duration: 0.5 }}
-                  className="absolute top-6 left-6 px-4 py-2 bg-white/95 backdrop-blur-md rounded-full shadow-lg"
+                  className="absolute top-4 left-4 md:top-6 md:left-6 px-3 py-1.5 md:px-4 md:py-2 bg-white/95 backdrop-blur-md rounded-full shadow-lg"
                 >
-                  <div className="flex items-center gap-2">
-                    <Sparkles className="w-4 h-4 text-[#cee002]" />
-                    <span className="text-sm font-semibold text-neutral-900">Maiden Project</span>
+                  <div className="flex items-center gap-1.5 md:gap-2">
+                    <Sparkles className="w-3 h-3 md:w-4 md:h-4 text-[#cee002]" />
+                    <span className="text-xs md:text-sm font-semibold text-neutral-900">Maiden Project</span>
                   </div>
                 </motion.div>
 
@@ -79,19 +79,19 @@ export function FeaturedProjectSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.5, duration: 0.6 }}
-                  className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 via-black/60 to-transparent"
+                  className="absolute bottom-0 left-0 right-0 p-4 md:p-6 bg-gradient-to-t from-black/80 via-black/60 to-transparent"
                 >
-                  <div className="grid grid-cols-3 gap-4">
+                  <div className="grid grid-cols-3 gap-2 md:gap-4">
                     <div className="text-center">
-                      <div className="text-2xl md:text-3xl font-bold text-white mb-1">25</div>
+                      <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-0.5 md:mb-1">25</div>
                       <div className="text-xs md:text-sm text-white/80">Homes</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl md:text-3xl font-bold text-white mb-1">2-3</div>
+                      <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-0.5 md:mb-1">2-3</div>
                       <div className="text-xs md:text-sm text-white/80">Bedrooms</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl md:text-3xl font-bold text-white mb-1">100%</div>
+                      <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-0.5 md:mb-1">100%</div>
                       <div className="text-xs md:text-sm text-white/80">Solar</div>
                     </div>
                   </div>
@@ -106,17 +106,17 @@ export function FeaturedProjectSection() {
             className="relative order-1 lg:order-2 px-4 md:px-0"
           >
             <Reveal>
-              <div className="space-y-6 md:space-y-8">
+              <div className="space-y-4 md:space-y-6 lg:space-y-8">
                 {/* Badge */}
                 <motion.div
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6 }}
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-[#cee002]/10 rounded-full border border-[#cee002]/20"
+                  className="inline-flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-[#cee002]/10 rounded-full border border-[#cee002]/20"
                 >
-                  <Home className="w-4 h-4 text-[#cee002]" />
-                  <span className="text-sm font-medium text-neutral-900">Building Communities</span>
+                  <Home className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#cee002]" />
+                  <span className="text-xs md:text-sm font-medium text-neutral-900">Building Communities</span>
                 </motion.div>
 
                 {/* Main Heading */}
@@ -125,7 +125,7 @@ export function FeaturedProjectSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.1, duration: 0.6 }}
-                  className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 leading-tight"
+                  className="text-3xl md:text-5xl lg:text-6xl font-bold text-neutral-900 leading-tight"
                 >
                   <span className="block">Eden</span>
                   <span className="block bg-gradient-to-r from-neutral-900 via-neutral-700 to-neutral-900 bg-clip-text text-transparent">
@@ -139,7 +139,7 @@ export function FeaturedProjectSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.2, duration: 0.6 }}
-                  className="text-xl md:text-2xl text-neutral-600 font-light"
+                  className="text-lg md:text-2xl text-neutral-600 font-light"
                 >
                   Our Maiden Project
                 </motion.p>
@@ -150,12 +150,12 @@ export function FeaturedProjectSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.3, duration: 0.6 }}
-                  className="space-y-4"
+                  className="space-y-3 md:space-y-4"
                 >
-                  <p className="text-base md:text-lg text-neutral-600 leading-relaxed">
+                  <p className="text-sm md:text-base lg:text-lg text-neutral-600 leading-relaxed">
                     Discover a thoughtfully designed neighborhood of 25 modern homes, offering a perfect blend of 2-bedroom and 3-bedroom layouts. Each residence features smart home capabilities and solar power integration.
                   </p>
-                  <p className="text-base md:text-lg text-neutral-600 leading-relaxed">
+                  <p className="text-sm md:text-base lg:text-lg text-neutral-600 leading-relaxed">
                     Built with sustainability at heart, our homes maximize natural light and cross-ventilation to create bright, airy spaces that feel connected to the environment.
                   </p>
                 </motion.div>
@@ -166,42 +166,42 @@ export function FeaturedProjectSection() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: 0.4, duration: 0.6 }}
-                  className="grid grid-cols-2 gap-4 pt-4"
+                  className="grid grid-cols-2 gap-3 md:gap-4 pt-3 md:pt-4"
                 >
-                  <div className="flex items-start gap-3">
-                    <div className="p-2 bg-[#cee002]/10 rounded-lg flex-shrink-0">
-                      <Home className="w-5 h-5 text-[#cee002]" />
+                  <div className="flex items-start gap-2 md:gap-3">
+                    <div className="p-1.5 md:p-2 bg-[#cee002]/10 rounded-lg flex-shrink-0">
+                      <Home className="w-4 h-4 md:w-5 md:h-5 text-[#cee002]" />
                     </div>
                     <div>
-                      <div className="font-semibold text-neutral-900 mb-1">Smart Homes</div>
-                      <div className="text-sm text-neutral-600">Modern technology</div>
+                      <div className="text-sm md:text-base font-semibold text-neutral-900 mb-0.5 md:mb-1">Smart Homes</div>
+                      <div className="text-xs md:text-sm text-neutral-600">Modern technology</div>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <div className="p-2 bg-[#cee002]/10 rounded-lg flex-shrink-0">
-                      <Leaf className="w-5 h-5 text-[#cee002]" />
+                  <div className="flex items-start gap-2 md:gap-3">
+                    <div className="p-1.5 md:p-2 bg-[#cee002]/10 rounded-lg flex-shrink-0">
+                      <Leaf className="w-4 h-4 md:w-5 md:h-5 text-[#cee002]" />
                     </div>
                     <div>
-                      <div className="font-semibold text-neutral-900 mb-1">Sustainable</div>
-                      <div className="text-sm text-neutral-600">Solar powered</div>
+                      <div className="text-sm md:text-base font-semibold text-neutral-900 mb-0.5 md:mb-1">Sustainable</div>
+                      <div className="text-xs md:text-sm text-neutral-600">Solar powered</div>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <div className="p-2 bg-[#cee002]/10 rounded-lg flex-shrink-0">
-                      <Users className="w-5 h-5 text-[#cee002]" />
+                  <div className="flex items-start gap-2 md:gap-3">
+                    <div className="p-1.5 md:p-2 bg-[#cee002]/10 rounded-lg flex-shrink-0">
+                      <Users className="w-4 h-4 md:w-5 md:h-5 text-[#cee002]" />
                     </div>
                     <div>
-                      <div className="font-semibold text-neutral-900 mb-1">Community</div>
-                      <div className="text-sm text-neutral-600">25 homes</div>
+                      <div className="text-sm md:text-base font-semibold text-neutral-900 mb-0.5 md:mb-1">Community</div>
+                      <div className="text-xs md:text-sm text-neutral-600">25 homes</div>
                     </div>
                   </div>
-                  <div className="flex items-start gap-3">
-                    <div className="p-2 bg-[#cee002]/10 rounded-lg flex-shrink-0">
-                      <Sparkles className="w-5 h-5 text-[#cee002]" />
+                  <div className="flex items-start gap-2 md:gap-3">
+                    <div className="p-1.5 md:p-2 bg-[#cee002]/10 rounded-lg flex-shrink-0">
+                      <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-[#cee002]" />
                     </div>
                     <div>
-                      <div className="font-semibold text-neutral-900 mb-1">Modern Design</div>
-                      <div className="text-sm text-neutral-600">Thoughtful layouts</div>
+                      <div className="text-sm md:text-base font-semibold text-neutral-900 mb-0.5 md:mb-1">Modern Design</div>
+                      <div className="text-xs md:text-sm text-neutral-600">Thoughtful layouts</div>
                     </div>
                   </div>
                 </motion.div>
@@ -216,10 +216,10 @@ export function FeaturedProjectSection() {
                 >
                   <Link
                     href="/projects"
-                    className="group inline-flex items-center gap-3 px-8 py-4 bg-neutral-900 text-white rounded-full hover:bg-neutral-800 transition-all duration-300 font-medium text-base md:text-lg shadow-lg hover:shadow-xl hover:scale-105"
+                    className="group inline-flex items-center gap-2 md:gap-3 px-6 py-3 md:px-8 md:py-4 bg-neutral-900 text-white rounded-full hover:bg-neutral-800 transition-all duration-300 font-medium text-sm md:text-base lg:text-lg shadow-lg hover:shadow-xl hover:scale-105"
                   >
                     <span>Explore Eden Village</span>
-                    <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </motion.div>
               </div>
