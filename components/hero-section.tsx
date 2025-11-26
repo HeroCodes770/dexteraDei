@@ -16,15 +16,14 @@ import { BlurPanel } from "./blur-panel";
 // Project images for the hero section
 const heroProjects = [
   {
-    src: "/projects/royal-seat/night_view.mp4",
+    src: "/projects/royal-seat/Royal Seat.mp4",
     alt: "Project Royal Seat - Luxury residential project",
     title: "PROJECT ROYAL SEAT",
     subtitle: "Luxury Residential",
     category: "RESIDENTIAL",
     category2: "MODERN DESIGN",
     description: "Where elegance meets contemporary living",
-    isVideo: true,
-    startTime: 22
+    isVideo: true
   },
   {
     src: "/projects/Villa/villa1.jpg",
