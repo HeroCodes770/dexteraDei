@@ -126,11 +126,12 @@ export const clientProjectsData: Project[] = [
     name: "Royal Seat",
     description: "A luxury residential project that embodies elegance and contemporary living. Where sophistication meets modern design in a stunning architectural masterpiece.",
     category: "Residential",
-    image: "/Royal Seat.mp4",
+    image: "/projects/royal-seat/night_view.mp4",
     status: "Completed",
     type: "Design & Build",
     images: [
-      "/Royal Seat.mp4",
+      "/projects/royal-seat/night_view.mp4",
+      "/projects/royal-seat/Royal Seat.mp4",
     ],
     isVideo: true,
     specifications: {

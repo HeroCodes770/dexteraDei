@@ -48,14 +48,31 @@ export function ClientProjectsSection() {
                 whileHover={{ y: -8 }}
                 className="group bg-white rounded-xl md:rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 border border-neutral-100"
               >
-                {/* Image */}
+                {/* Image/Video */}
                 <div className="relative h-64 overflow-hidden bg-gradient-to-br from-neutral-100 to-neutral-200">
-                  <Image
-                    src={project.image}
-                    alt={project.name}
-                    fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
+                  {project.isVideo ? (
+                    <video
+                      src={project.image.replace(' ', '%20')}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                      onLoadedMetadata={(e) => {
+                        // Start video at 22 seconds for night_view
+                        if (project.image.includes('night_view')) {
+                          e.currentTarget.currentTime = 22
+                        }
+                      }}
+                    />
+                  ) : (
+                    <Image
+                      src={project.image}
+                      alt={project.name}
+                      fill
+                      className="object-cover group-hover:scale-110 transition-transform duration-700"
+                    />
+                  )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
                   
                   {/* Status Badge */}

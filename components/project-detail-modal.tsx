@@ -57,6 +57,7 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
                   <div className="relative w-full h-full max-w-7xl mx-auto">
                     {project.isVideo ? (
                       <video
+                        key={currentImageIndex}
                         src={currentImage.replace(' ', '%20')}
                         autoPlay
                         loop
@@ -79,29 +80,29 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent pointer-events-none" />
 
                   {/* Navigation Arrows */}
-                  {images.length > 1 && !project.isVideo && (
+                  {images.length > 1 && (
                     <>
                       <button
                         onClick={prevImage}
-                        className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-white/90 hover:bg-white rounded-full shadow-lg transition-all duration-200 hover:scale-110"
-                        aria-label="Previous image"
+                        className="absolute left-4 top-1/2 -translate-y-1/2 p-3 bg-white/90 hover:bg-white rounded-full shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                        aria-label="Previous"
                       >
                         <ChevronLeft className="w-6 h-6 text-neutral-900" />
                       </button>
                       <button
                         onClick={nextImage}
-                        className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-white/90 hover:bg-white rounded-full shadow-lg transition-all duration-200 hover:scale-110"
-                        aria-label="Next image"
+                        className="absolute right-4 top-1/2 -translate-y-1/2 p-3 bg-white/90 hover:bg-white rounded-full shadow-lg transition-all duration-200 hover:scale-110 z-10"
+                        aria-label="Next"
                       >
                         <ChevronRight className="w-6 h-6 text-neutral-900" />
                       </button>
                     </>
                   )}
 
-                  {/* Image Counter */}
-                  {images.length > 1 && !project.isVideo && (
-                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-white/90 rounded-full text-sm font-medium text-neutral-900">
-                      {currentImageIndex + 1} / {images.length}
+                  {/* Media Counter */}
+                  {images.length > 1 && (
+                    <div className="absolute bottom-4 left-1/2 -translate-x-1/2 px-4 py-2 bg-white/90 rounded-full text-sm font-medium text-neutral-900 z-10">
+                      {project.isVideo ? "Video " : ""}{currentImageIndex + 1} / {images.length}
                     </div>
                   )}
 
@@ -143,11 +144,11 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
                   </div>
                 </div>
 
-                {/* Thumbnail Gallery - More Prominent */}
-                {images.length > 1 && !project.isVideo && (
-                  <div className="absolute bottom-20 left-0 right-0 px-6 md:px-8 pb-4">
-                    <div className="flex gap-3 overflow-x-auto scrollbar-hide max-w-6xl mx-auto">
-                      {images.map((img, index) => (
+                {/* Thumbnail Gallery / Video Selector */}
+                {images.length > 1 && (
+                  <div className="absolute bottom-20 left-0 right-0 px-6 md:px-8 pb-4 z-10">
+                    <div className="flex gap-3 overflow-x-auto scrollbar-hide max-w-6xl mx-auto justify-center">
+                      {images.map((media, index) => (
                         <button
                           key={index}
                           onClick={() => setCurrentImageIndex(index)}
@@ -157,13 +158,24 @@ export function ProjectDetailModal({ project, isOpen, onClose }: ProjectDetailMo
                               : "border-white/60 hover:border-white/90 hover:scale-105"
                           }`}
                         >
-                          <Image
-                            src={img}
-                            alt={`${project.name} ${index + 1}`}
-                            fill
-                            className="object-cover"
-                            sizes="112px"
-                          />
+                          {project.isVideo ? (
+                            <div className="w-full h-full bg-neutral-800 flex items-center justify-center">
+                              <div className="text-center">
+                                <div className="w-8 h-8 mx-auto mb-1 rounded-full bg-white/20 flex items-center justify-center">
+                                  <div className="w-0 h-0 border-l-[8px] border-l-white border-t-[5px] border-t-transparent border-b-[5px] border-b-transparent ml-1" />
+                                </div>
+                                <span className="text-white text-xs font-medium">Video {index + 1}</span>
+                              </div>
+                            </div>
+                          ) : (
+                            <Image
+                              src={media}
+                              alt={`${project.name} ${index + 1}`}
+                              fill
+                              className="object-cover"
+                              sizes="112px"
+                            />
+                          )}
                         </button>
                       ))}
                     </div>
