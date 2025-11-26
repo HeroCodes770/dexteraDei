@@ -91,16 +91,17 @@ export const clientProjectsData: Project[] = [
     name: "Project Proton",
     description: "A cutting-edge development project combining technology and sustainable design. Modern architecture meets innovation in this forward-thinking development.",
     category: "Residential",
-    image: "/projects/proton/hero.jpg",
+    image: "/projects/proton/img1.jpg",
     status: "In-Design",
-    type: "Design & Build",
+    type: "Design",
     images: [
-      "/projects/proton/hero.jpg",
+      "/projects/proton/img1.jpg",
+      "/projects/proton/img2.jpg",
     ],
     specifications: {
       location: "Accra, Ghana",
       area: "~325 sqm",
-      type: "Design & Build"
+      type: "Design"
     }
   },
   {

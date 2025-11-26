@@ -69,6 +69,15 @@ const heroProjects = [
     category: "RESIDENTIAL",
     category2: "3 BEDROOM",
     description: "Spacious 3-bedroom homes with smart technologies"
+  },
+  {
+    src: "/projects/proton/img1.jpg",
+    alt: "Project Proton - Modern residential design",
+    title: "PROJECT PROTON",
+    subtitle: "In-Design",
+    category: "RESIDENTIAL",
+    category2: "MODERN DESIGN",
+    description: "A cutting-edge development combining technology and sustainable design"
   }
 ];
 
