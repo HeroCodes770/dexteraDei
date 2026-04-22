@@ -16,6 +16,24 @@ import { BlurPanel } from "./blur-panel";
 // Project images for the hero section
 const heroProjects = [
   {
+    src: "/projects/guau-court/IMG_4574.JPEG",
+    alt: "Guau Court — Eden Village Phase 1",
+    title: "GUAU COURT",
+    subtitle: "Launching May 2026",
+    category: "EDEN VILLAGE · PHASE 1",
+    category2: "PRAMPRAM",
+    description: "10 homes. 3 remaining. An exclusive 4-bedroom community.",
+  },
+  {
+    src: "/projects/guau-court/img_interior1.jpeg",
+    alt: "Guau Court Interior",
+    title: "EDEN VILLAGE",
+    subtitle: "Guau Court Interiors",
+    category: "4 BEDROOM",
+    category2: "SMART HOME",
+    description: "Every detail crafted for the way you live",
+  },
+  {
     src: "/projects/royal-seat/Royal Seat.mp4",
     alt: "Project Royal Seat - Luxury residential project",
     title: "PROJECT ROYAL SEAT",
@@ -24,15 +42,6 @@ const heroProjects = [
     category2: "MODERN DESIGN",
     description: "Where elegance meets contemporary living",
     isVideo: true
-  },
-  {
-    src: "/projects/Villa/villa1.jpg",
-    alt: "Project Villa - Sophisticated villa design",
-    title: "PROJECT VILLA",
-    subtitle: "Villa Visualisation",
-    category: "ARCHITECTURE",
-    category2: "LUXURY",
-    description: "Crafting spaces that inspire"
   },
   {
     src: "/projects/Vertika/vert1.jpg",
@@ -53,31 +62,22 @@ const heroProjects = [
     description: "Every detail tells a story"
   },
   {
-    src: "/projects/eden/2bedroom/A.jpg",
-    alt: "Covalent Homes - 2 bedroom homes",
+    src: "/projects/eden/3bedroom/night view.jpeg",
+    alt: "Eden Village Symphony",
     title: "EDEN VILLAGE",
-    subtitle: "Covalent Homes",
-    category: "RESIDENTIAL",
-    category2: "2 BEDROOM",
-    description: "Thoughtfully designed 2-bedroom homes with modern amenities"
+    subtitle: "Symphony · Phase 2",
+    category: "EAST LEGON HILLS",
+    category2: "RESERVATIONS OPEN",
+    description: "25 homes. 2 & 3 bedrooms. Reserve yours now."
   },
   {
-    src: "/projects/eden/3bedroom/better_internal_view.jpg",
-    alt: "Tritone Homes - 3 bedroom homes",
-    title: "EDEN VILLAGE",
-    subtitle: "Tritone Homes",
+    src: "/projects/grandiose/001.jpg",
+    alt: "Project Grandiose",
+    title: "PROJECT GRANDIOSE",
+    subtitle: "On-Site",
     category: "RESIDENTIAL",
-    category2: "3 BEDROOM",
-    description: "Spacious 3-bedroom homes with smart technologies"
-  },
-  {
-    src: "/projects/proton/img1.jpg",
-    alt: "Project Proton - Modern residential design",
-    title: "PROJECT PROTON",
-    subtitle: "In-Design",
-    category: "RESIDENTIAL",
-    category2: "MODERN DESIGN",
-    description: "A cutting-edge development combining technology and sustainable design"
+    category2: "DESIGN & BUILD",
+    description: "A landmark architectural project under construction"
   }
 ];
 
@@ -97,7 +97,7 @@ export function HeroSection() {
   const contentY = useTransform(scrollYProgress, [0, 1], [0, 100]);
   const contentOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
 
-  // Auto-change project every 30 seconds
+  // Auto-change project every 6 seconds
   useEffect(() => {
     if (typeof window === "undefined") return;
 
@@ -106,13 +106,12 @@ export function HeroSection() {
         setIsTransitioning(true);
         const nextIndex = (currentProjectIndex + 1) % heroProjects.length;
         
-        // Simple state change after a short delay
         setTimeout(() => {
           setCurrentProjectIndex(nextIndex);
           setIsTransitioning(false);
         }, 800);
       }
-    }, 30000);
+    }, 6000);
 
     return () => clearInterval(interval);
   }, [currentProjectIndex, isTransitioning]);

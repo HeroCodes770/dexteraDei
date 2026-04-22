@@ -25,9 +25,15 @@ const navigationItems = [
     isHash: true
   },
   {
-    name: "Projects",
+    name: "Eden Village",
     href: "/projects",
-    description: "Discover our projects and building practices",
+    description: "Our flagship development — two phases, two locations",
+    isHash: false
+  },
+  {
+    name: "Our Projects",
+    href: "/our-work",
+    description: "Portfolio of design & build excellence",
     isHash: false
   },
   {

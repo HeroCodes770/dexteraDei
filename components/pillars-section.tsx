@@ -91,7 +91,7 @@ export function PillarsSection() {
         <Reveal delay={0.4}>
           <div className="mt-16 text-center">
             <Link
-              href="/projects"
+              href="/our-work"
               className="inline-flex items-center gap-3 px-8 py-4 bg-neutral-900 text-white rounded-full hover:bg-neutral-800 transition-all duration-300 group font-medium"
             >
               View All Projects

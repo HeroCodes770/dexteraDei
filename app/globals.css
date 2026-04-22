@@ -163,6 +163,13 @@
     scroll-behavior: smooth;
   }
 
+  /* ── Display font: Cormorant Garamond on all primary headings ──────────── *
+   * To revert: remove this block and the cormorant import in layout.tsx      */
+  h1, h2 {
+    font-family: var(--font-cormorant), Georgia, serif;
+    letter-spacing: -0.01em;
+  }
+
   /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 6px;

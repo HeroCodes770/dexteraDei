@@ -1,40 +1,20 @@
 "use client"
 
-import { motion } from "framer-motion"
-import Image from "next/image"
-import { 
-  Home, 
-  Bed, 
-  Car, 
-  Droplets, 
-  Sun, 
-  Shield, 
-  Users, 
-  TreePine, 
-  Lightbulb,
-  CheckCircle2,
-  ArrowRight,
-  Building2
-} from "lucide-react"
 import { EdenProjectHero } from "./eden-project-hero"
-import { HomeTypesSection } from "./home-types-section"
-import { CommunityAmenities } from "./community-amenities"
-import { ClientProjectsSection } from "./client-projects-section"
+import { GuauCourtSection } from "./guau-court-section"
+import { SymphonySection } from "./symphony-section"
 
 export function ProjectsSection() {
   return (
-    <section className="min-h-screen bg-white">
-      {/* Eden Project Hero Section */}
+    <div className="min-h-screen">
+      {/* Eden Village brand hero — parent brand intro */}
       <EdenProjectHero />
-      
-      {/* Home Types Section */}
-      <HomeTypesSection />
-      
-      {/* Community Amenities Section */}
-      <CommunityAmenities />
-      
-      {/* Client Projects Section */}
-      <ClientProjectsSection />
-    </section>
+
+      {/* Phase 1 — Guau Court */}
+      <GuauCourtSection />
+
+      {/* Phase 2 — Symphony */}
+      <SymphonySection />
+    </div>
   )
 }

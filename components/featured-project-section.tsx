@@ -4,8 +4,13 @@ import { motion, useScroll, useTransform } from "framer-motion"
 import { useRef } from "react"
 import Image from "next/image"
 import Link from "next/link"
-import { ArrowRight, Home, Users, Leaf, Sparkles } from "lucide-react"
+import { ArrowRight, MapPin, Flame, Bed, Home, Shield } from "lucide-react"
 import { Reveal } from "./reveal"
+import { edenVillagePhases } from "@/lib/eden-village-data"
+
+const guauCourt = edenVillagePhases[0]
+const symphony = edenVillagePhases[1]
+const unitsRemaining = guauCourt.totalUnits - guauCourt.unitsSold
 
 export function FeaturedProjectSection() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -14,220 +19,218 @@ export function FeaturedProjectSection() {
     offset: ["start end", "end start"],
   })
 
-  const imageY = useTransform(scrollYProgress, [0, 1], [0, -100])
-  const contentY = useTransform(scrollYProgress, [0, 1], [0, 50])
-  const opacity = useTransform(scrollYProgress, [0, 0.3, 0.7, 1], [0, 1, 1, 0])
+  const imageY = useTransform(scrollYProgress, [0, 1], [0, -80])
+  const opacity = useTransform(scrollYProgress, [0, 0.2, 0.8, 1], [0, 1, 1, 0])
 
   return (
-    <section 
+    <section
       ref={containerRef}
-      className="relative py-16 md:py-24 lg:py-32 xl:py-40 overflow-hidden bg-gradient-to-b from-white via-neutral-50 to-white"
+      className="relative py-16 md:py-24 lg:py-32 overflow-hidden bg-white"
     >
-      {/* Background decorative elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-[#cee002]/5 rounded-full blur-3xl" />
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-neutral-900/5 rounded-full blur-3xl" />
+      {/* Subtle background texture */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#cee002]/5 rounded-full blur-3xl translate-x-1/3 -translate-y-1/3" />
+        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-neutral-900/4 rounded-full blur-3xl -translate-x-1/3 translate-y-1/3" />
       </div>
 
       <div className="container-custom relative z-10">
-        <div className="grid lg:grid-cols-2 gap-6 md:gap-8 lg:gap-16 items-center">
-          {/* Image Side - Left */}
-          <motion.div
-            style={{ y: imageY, opacity }}
-            className="relative order-2 lg:order-1"
-          >
+        {/* Section header */}
+        <Reveal>
+          <div className="text-center mb-12 md:mb-16">
+            <span className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.25em] text-[#cee002] uppercase mb-4">
+              <span className="w-6 h-px bg-[#cee002]" />
+              Eden Village
+              <span className="w-6 h-px bg-[#cee002]" />
+            </span>
+            <h2 className="text-4xl md:text-6xl font-bold text-neutral-900 leading-tight">
+              Now Launching
+            </h2>
+          </div>
+        </Reveal>
+
+        {/* Main feature — Guau Court */}
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center mb-16">
+          {/* Image */}
+          <motion.div style={{ y: imageY, opacity }} className="relative order-2 lg:order-1">
             <Reveal>
               <div className="relative aspect-[4/3] lg:aspect-[3/4] rounded-3xl overflow-hidden shadow-2xl group">
-                {/* Main Image */}
                 <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.6, ease: [0.21, 0.47, 0.32, 0.98] }}
+                  whileHover={{ scale: 1.04 }}
+                  transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
                   className="relative w-full h-full"
                 >
                   <Image
-                    src="/projects/eden/3bedroom/night view.jpeg"
-                    alt="Eden Project - Modern residential community"
+                    src="/projects/guau-court/IMG_4574.JPEG"
+                    alt="Guau Court — Eden Village Phase 1"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                     priority
                   />
-                  {/* Gradient Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent opacity-60 group-hover:opacity-40 transition-opacity duration-500" />
-                  
-                  {/* Shine effect on hover */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                 </motion.div>
 
-                {/* Floating Badge */}
+                {/* Phase badge */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.3, duration: 0.5 }}
-                  className="absolute top-4 left-4 md:top-6 md:left-6 px-3 py-1.5 md:px-4 md:py-2 bg-white/95 backdrop-blur-md rounded-full shadow-lg"
+                  transition={{ delay: 0.3 }}
+                  className="absolute top-4 left-4 md:top-6 md:left-6 px-3 py-1.5 bg-white/95 backdrop-blur-md rounded-full shadow-lg flex items-center gap-1.5"
                 >
-                  <div className="flex items-center gap-1.5 md:gap-2">
-                    <Sparkles className="w-3 h-3 md:w-4 md:h-4 text-[#cee002]" />
-                    <span className="text-xs md:text-sm font-semibold text-neutral-900">Maiden Project</span>
-                  </div>
+                  <Flame className="w-3.5 h-3.5 text-orange-500" />
+                  <span className="text-xs font-bold text-neutral-900">Phase 1 · Launching May</span>
                 </motion.div>
 
-                {/* Stats Overlay - Bottom */}
+                {/* Stats */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ delay: 0.5, duration: 0.6 }}
-                  className="absolute bottom-0 left-0 right-0 p-4 md:p-6 bg-gradient-to-t from-black/80 via-black/60 to-transparent"
+                  transition={{ delay: 0.5 }}
+                  className="absolute bottom-0 left-0 right-0 p-4 md:p-6 bg-gradient-to-t from-black/90 via-black/60 to-transparent"
                 >
-                  <div className="grid grid-cols-3 gap-2 md:gap-4">
+                  <div className="grid grid-cols-3 gap-2 md:gap-4 mb-3">
                     <div className="text-center">
-                      <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-0.5 md:mb-1">25</div>
-                      <div className="text-xs md:text-sm text-white/80">Homes</div>
+                      <div className="text-2xl md:text-3xl font-bold text-white">{guauCourt.totalUnits}</div>
+                      <div className="text-xs text-white/70">Total Homes</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-0.5 md:mb-1">2-3</div>
-                      <div className="text-xs md:text-sm text-white/80">Bedrooms</div>
+                      <div className="text-2xl md:text-3xl font-bold text-[#cee002]">{unitsRemaining}</div>
+                      <div className="text-xs text-white/70">Remaining</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-0.5 md:mb-1">100%</div>
-                      <div className="text-xs md:text-sm text-white/80">Solar</div>
+                      <div className="text-2xl md:text-3xl font-bold text-white">4</div>
+                      <div className="text-xs text-white/70">Bedrooms</div>
                     </div>
                   </div>
+
+                  {/* Availability bar */}
+                  <div className="flex gap-1">
+                    {Array.from({ length: guauCourt.totalUnits }).map((_, i) => (
+                      <div
+                        key={i}
+                        className={`flex-1 h-1.5 rounded-full ${
+                          i < guauCourt.unitsSold ? "bg-white/30" : "bg-[#cee002]"
+                        }`}
+                      />
+                    ))}
+                  </div>
+                  <p className="text-xs text-white/60 mt-1.5">
+                    {guauCourt.unitsSold} of {guauCourt.totalUnits} homes reserved
+                  </p>
                 </motion.div>
               </div>
             </Reveal>
           </motion.div>
 
-          {/* Content Side - Right */}
-          <motion.div
-            style={{ y: contentY, opacity }}
-            className="relative order-1 lg:order-2 px-4 md:px-0"
-          >
+          {/* Content */}
+          <div className="relative order-1 lg:order-2 px-4 md:px-0">
             <Reveal>
-              <div className="space-y-4 md:space-y-6 lg:space-y-8">
-                {/* Badge */}
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6 }}
-                  className="inline-flex items-center gap-1.5 md:gap-2 px-3 py-1.5 md:px-4 md:py-2 bg-[#cee002]/10 rounded-full border border-[#cee002]/20"
-                >
-                  <Home className="w-3.5 h-3.5 md:w-4 md:h-4 text-[#cee002]" />
-                  <span className="text-xs md:text-sm font-medium text-neutral-900">Building Communities</span>
-                </motion.div>
-
-                {/* Main Heading */}
-                <motion.h2
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.1, duration: 0.6 }}
-                  className="text-3xl md:text-5xl lg:text-6xl font-bold text-neutral-900 leading-tight"
-                >
-                  <span className="block">Eden</span>
-                  <span className="block bg-gradient-to-r from-neutral-900 via-neutral-700 to-neutral-900 bg-clip-text text-transparent">
-                    Village
+              <div className="space-y-6">
+                {/* Urgency tags */}
+                <div className="flex flex-wrap gap-2">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-orange-50 border border-orange-200 rounded-full text-xs font-bold text-orange-700 uppercase tracking-wide">
+                    <Flame className="w-3 h-3" />
+                    Launching May 2026
                   </span>
-                </motion.h2>
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-neutral-100 border border-neutral-200 rounded-full text-xs font-semibold text-neutral-700 uppercase tracking-wide">
+                    Only {unitsRemaining} homes left
+                  </span>
+                </div>
 
-                {/* Subtitle */}
-                <motion.p
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.2, duration: 0.6 }}
-                  className="text-lg md:text-2xl text-neutral-600 font-light"
-                >
-                  Our Maiden Project
-                </motion.p>
+                {/* Title */}
+                <div>
+                  <p className="text-sm font-medium text-neutral-500 mb-1">Eden Village</p>
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-neutral-900 leading-none">
+                    Guau Court
+                  </h2>
+                </div>
+
+                {/* Location */}
+                <div className="flex items-center gap-2 text-neutral-500">
+                  <MapPin className="w-4 h-4" />
+                  <span className="text-sm">{guauCourt.location}</span>
+                </div>
 
                 {/* Description */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.3, duration: 0.6 }}
-                  className="space-y-3 md:space-y-4"
-                >
-                  <p className="text-sm md:text-base lg:text-lg text-neutral-600 leading-relaxed">
-                    Discover a thoughtfully designed neighborhood of 25 modern homes, offering a perfect blend of 2-bedroom and 3-bedroom layouts. Each residence features smart home capabilities and solar power integration.
-                  </p>
-                  <p className="text-sm md:text-base lg:text-lg text-neutral-600 leading-relaxed">
-                    Built with sustainability at heart, our homes maximize natural light and cross-ventilation to create bright, airy spaces that feel connected to the environment.
-                  </p>
-                </motion.div>
+                <p className="text-neutral-600 leading-relaxed">
+                  {guauCourt.description} Each home is a 4-bedroom masterpiece — smart, solar-powered, and built for the way you want to live.
+                </p>
 
-                {/* Key Features */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.4, duration: 0.6 }}
-                  className="grid grid-cols-2 gap-3 md:gap-4 pt-3 md:pt-4"
-                >
-                  <div className="flex items-start gap-2 md:gap-3">
-                    <div className="p-1.5 md:p-2 bg-[#cee002]/10 rounded-lg flex-shrink-0">
-                      <Home className="w-4 h-4 md:w-5 md:h-5 text-[#cee002]" />
+                {/* Feature pills */}
+                <div className="grid grid-cols-2 gap-3">
+                  {[
+                    { icon: Home, text: "Gated Community" },
+                    { icon: Bed, text: "4-Bedroom Homes" },
+                    { icon: Shield, text: "Smart Home Tech" },
+                    { icon: Flame, text: "Solar Powered" },
+                  ].map(({ icon: Icon, text }) => (
+                    <div key={text} className="flex items-center gap-2.5 p-3 bg-neutral-50 rounded-xl border border-neutral-100">
+                      <div className="p-1.5 bg-[#cee002]/15 rounded-lg">
+                        <Icon className="w-4 h-4 text-neutral-700" />
+                      </div>
+                      <span className="text-sm font-medium text-neutral-700">{text}</span>
                     </div>
-                    <div>
-                      <div className="text-sm md:text-base font-semibold text-neutral-900 mb-0.5 md:mb-1">Smart Homes</div>
-                      <div className="text-xs md:text-sm text-neutral-600">Modern technology</div>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-2 md:gap-3">
-                    <div className="p-1.5 md:p-2 bg-[#cee002]/10 rounded-lg flex-shrink-0">
-                      <Leaf className="w-4 h-4 md:w-5 md:h-5 text-[#cee002]" />
-                    </div>
-                    <div>
-                      <div className="text-sm md:text-base font-semibold text-neutral-900 mb-0.5 md:mb-1">Sustainable</div>
-                      <div className="text-xs md:text-sm text-neutral-600">Solar powered</div>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-2 md:gap-3">
-                    <div className="p-1.5 md:p-2 bg-[#cee002]/10 rounded-lg flex-shrink-0">
-                      <Users className="w-4 h-4 md:w-5 md:h-5 text-[#cee002]" />
-                    </div>
-                    <div>
-                      <div className="text-sm md:text-base font-semibold text-neutral-900 mb-0.5 md:mb-1">Community</div>
-                      <div className="text-xs md:text-sm text-neutral-600">25 homes</div>
-                    </div>
-                  </div>
-                  <div className="flex items-start gap-2 md:gap-3">
-                    <div className="p-1.5 md:p-2 bg-[#cee002]/10 rounded-lg flex-shrink-0">
-                      <Sparkles className="w-4 h-4 md:w-5 md:h-5 text-[#cee002]" />
-                    </div>
-                    <div>
-                      <div className="text-sm md:text-base font-semibold text-neutral-900 mb-0.5 md:mb-1">Modern Design</div>
-                      <div className="text-xs md:text-sm text-neutral-600">Thoughtful layouts</div>
-                    </div>
-                  </div>
-                </motion.div>
+                  ))}
+                </div>
 
-                {/* CTA Button */}
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: 0.5, duration: 0.6 }}
-                  className="pt-4"
-                >
+                {/* CTAs */}
+                <div className="flex flex-col sm:flex-row gap-3 pt-2">
                   <Link
-                    href="/projects"
-                    className="group inline-flex items-center gap-2 md:gap-3 px-6 py-3 md:px-8 md:py-4 bg-neutral-900 text-white rounded-full hover:bg-neutral-800 transition-all duration-300 font-medium text-sm md:text-base lg:text-lg shadow-lg hover:shadow-xl hover:scale-105"
+                    href="/projects#guau-court"
+                    className="group inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-neutral-900 text-white rounded-full hover:bg-neutral-800 font-semibold text-sm transition-all duration-300 hover:scale-105 shadow-lg"
                   >
-                    <span>Explore Eden Village</span>
-                    <ArrowRight className="w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
+                    Explore Guau Court
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
-                </motion.div>
+                </div>
               </div>
             </Reveal>
-          </motion.div>
+          </div>
         </div>
+
+        {/* Symphony teaser strip */}
+        <Reveal>
+          <div className="relative rounded-3xl overflow-hidden bg-neutral-950">
+            <div className="absolute inset-0">
+              <Image
+                src="/projects/eden/3bedroom/night view.jpeg"
+                alt="Eden Village Symphony"
+                fill
+                className="object-cover opacity-40"
+                sizes="100vw"
+              />
+              <div className="absolute inset-0 bg-gradient-to-r from-neutral-950/90 via-neutral-950/70 to-neutral-950/50" />
+            </div>
+            <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 p-8 md:p-10">
+              <div>
+                <span className="text-xs font-bold tracking-[0.2em] text-[#cee002] uppercase block mb-2">
+                  Phase 2 · Coming Soon
+                </span>
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                  Eden Village — Symphony
+                </h3>
+                <div className="flex items-center gap-2 text-white/50">
+                  <MapPin className="w-3.5 h-3.5" />
+                  <span className="text-sm">{symphony.location}</span>
+                </div>
+                <p className="text-white/60 text-sm mt-3 max-w-md">
+                  25 homes in East Legon Hills. 2 & 3-bedroom layouts. Reservations are now open.
+                </p>
+              </div>
+              <Link
+                href="/projects#symphony"
+                className="group flex-shrink-0 inline-flex items-center gap-2 px-6 py-3 bg-[#cee002] text-neutral-900 rounded-full font-bold text-sm hover:bg-[#d9f002] transition-all hover:scale-105 shadow-lg shadow-[#cee002]/20"
+              >
+                Reserve a Home
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </Link>
+            </div>
+          </div>
+        </Reveal>
       </div>
     </section>
   )
 }
-
