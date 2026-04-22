@@ -86,7 +86,7 @@ export function EdenProjectHero() {
         >
           <span className="inline-flex items-center gap-2 text-xs font-bold tracking-[0.3em] text-[#cee002] uppercase">
             <span className="w-8 h-px bg-[#cee002]" />
-            A Dexter Adei Project
+            A Dextera Dei Project
             <span className="w-8 h-px bg-[#cee002]" />
           </span>
         </motion.div>
